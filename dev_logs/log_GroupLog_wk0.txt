@@ -1,0 +1,2 @@
+Sep 13th 
+- initial commit of git repo by all group members
