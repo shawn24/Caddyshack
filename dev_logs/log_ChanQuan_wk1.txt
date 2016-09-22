@@ -1,0 +1,3 @@
+This week our group discuss the what and which kinds of project we are going to develop.
+then we decide to develop a purchase guide program that can help people find the information by phone.
+we develop our program base on IOS system and use Swifts3 language.
