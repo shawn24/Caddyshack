@@ -1,2 +1,2 @@
 
-This week, we discuss and decide the topic of our project. We are going to create a portable device purchase guide application. We composed a proposal and some mockups of the application.
+This week, we discussed and decided the direction of our project. We will create a portable device purchase guide application for this project. We composed a proposal and some mockups of the application.
