@@ -1,3 +1,6 @@
-Sep 22
+Sep.22
 - Reviewed proposal and UI mockup, discussed with group and have UI changes.
 
+Sep.25
+- Upload the UI mockup slides for presentation use
+- Prepare for the presentation with proposal and UI diagram
