@@ -1,0 +1,3 @@
+Sep 30
+ we discuss about the structure of the our program. decide to use which database and seperate the task for each person.
+ i am going to collect the data of cell phones from the internet.
