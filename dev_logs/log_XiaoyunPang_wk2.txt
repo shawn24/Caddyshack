@@ -1,0 +1,5 @@
+Week 2: Sep. 25 - Oct. 1
+
+- Prepared for in-class proposal presentation
+- Discussed and designed structures of database
+- Implemented some basic codes
