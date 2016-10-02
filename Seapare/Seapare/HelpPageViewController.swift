@@ -1,25 +1,22 @@
 //
-//  ViewController.swift
+//  HelpViewController.swift
 //  Seapare
 //
-//  Created by Yuan Yao on 2016-09-30.
+//  Created by Yulun Wu on 2016-10-01.
 //  Copyright © 2016 Yuan Yao. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HelpPageViewController: UIViewController{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2528CEA81DA07E6400CEBD9A /* ComparePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2528CEA71DA07E6400CEBD9A /* ComparePageViewController.swift */; };
+		2551CE751DA03A9000B7410A /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE741DA03A9000B7410A /* ResultPageViewController.swift */; };
+		2551CE771DA03AF900B7410A /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE761DA03AF900B7410A /* HelpPageViewController.swift */; };
+		2551CE791DA03B9000B7410A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE781DA03B9000B7410A /* TabBarController.swift */; };
+		2551CE7D1DA0556E00B7410A /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */; };
 		29724C271D9EF765001140B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C261D9EF765001140B6 /* AppDelegate.swift */; };
-		29724C291D9EF765001140B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C281D9EF765001140B6 /* ViewController.swift */; };
+		29724C291D9EF765001140B6 /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C281D9EF765001140B6 /* SearchPageViewController.swift */; };
 		29724C2C1D9EF765001140B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29724C2A1D9EF765001140B6 /* Main.storyboard */; };
 		29724C2E1D9EF765001140B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29724C2D1D9EF765001140B6 /* Assets.xcassets */; };
 		29724C311D9EF765001140B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29724C2F1D9EF765001140B6 /* LaunchScreen.storyboard */; };
@@ -34,9 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2528CEA71DA07E6400CEBD9A /* ComparePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePageViewController.swift; sourceTree = "<group>"; };
+		2551CE741DA03A9000B7410A /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPageViewController.swift; sourceTree = "<group>"; };
+		2551CE761DA03AF900B7410A /* HelpPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPageViewController.swift; sourceTree = "<group>"; };
+		2551CE781DA03B9000B7410A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		29724C231D9EF765001140B6 /* Seapare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seapare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29724C261D9EF765001140B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		29724C281D9EF765001140B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29724C281D9EF765001140B6 /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
 		29724C2B1D9EF765001140B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		29724C2D1D9EF765001140B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29724C301D9EF765001140B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,7 +154,12 @@
 		29724C561D9EF7EF001140B6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				29724C281D9EF765001140B6 /* ViewController.swift */,
+				29724C281D9EF765001140B6 /* SearchPageViewController.swift */,
+				2551CE761DA03AF900B7410A /* HelpPageViewController.swift */,
+				2551CE781DA03B9000B7410A /* TabBarController.swift */,
+				2551CE741DA03A9000B7410A /* ResultPageViewController.swift */,
+				2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */,
+				2528CEA71DA07E6400CEBD9A /* ComparePageViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -283,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29724C291D9EF765001140B6 /* ViewController.swift in Sources */,
+				2551CE751DA03A9000B7410A /* ResultPageViewController.swift in Sources */,
+				29724C291D9EF765001140B6 /* SearchPageViewController.swift in Sources */,
+				2551CE791DA03B9000B7410A /* TabBarController.swift in Sources */,
 				29724C271D9EF765001140B6 /* AppDelegate.swift in Sources */,
+				2551CE7D1DA0556E00B7410A /* ResultTableViewCell.swift in Sources */,
+				2528CEA81DA07E6400CEBD9A /* ComparePageViewController.swift in Sources */,
+				2551CE771DA03AF900B7410A /* HelpPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +549,7 @@
 				29724C4D1D9EF765001140B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29724C4E1D9EF765001140B6 /* Build configuration list for PBXNativeTarget "SeapareTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +558,7 @@
 				29724C501D9EF765001140B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29724C511D9EF765001140B6 /* Build configuration list for PBXNativeTarget "SeapareUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +567,7 @@
 				29724C531D9EF765001140B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
