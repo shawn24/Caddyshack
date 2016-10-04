@@ -1,0 +1,36 @@
+name,brand,network,screen_size(inches),ppi,resolution,ram,capacity,device_size(mm),camera(mp),plateform,gps,bluetooth,nfc,memory_card,fingerprint,warranty,process,standby(h),talktime(h),weight
+iPhone 3Gs,Apple,GSM/HSPA,3.5,165,320x480,256(MB),8/16/32,115.5x62.1x12.3,3.15,iOS,yes,yes,no,no,no,1-year,A3,300,12,135
+iPhone 4,Apple,GSM/HSPA,3.5,330,640x960,512(MB),8/16/32,115.2x58.6x9.3,5,iOS,yes,yes,no,no,no,1-year,A4,300,14,137
+iPhone 4s,Apple,GSM/CDMA/HSPA/EVDO,3.5,330,640x960,512(MB),8/16/32/64,115.2x58.6x9.3,8,iOS,yes,yes,no,no,no,1-year,A5,200,14,140
+iPhone 5,Apple,GSM/CDMA/HSPA/EVDO/LTE,4,326,640x1136,1(GB),16/32/64,123.8x58.6x7.6,8,iOS,yes,yes,yes,no,no,1-year,A6,225,8,112
+iPhone 5s,Apple,GSM/CDMA/HSPA/EVDO/LTE,4,326,640x1136,1(GB),16/32/64,123.8x58.6x7.6,8,iOS,yes,yes,yes,no,no,1-year,A7,250,10,112
+iPhone 5c,Apple,GSM/CDMA/HSPA/LTE,4,326,640x1136,1(GB),16/32/64,124.4x59.2x9,8,iOS,yes,yes,yes,no,no,1-year,A6,250,10,132
+iPhone 6,Apple,GSM/CDMA/HSPA/EVDO/LTE,4.7,326,750x1334,1(GB),16/64/128,138.1x67x6.9,8,iOS,yes,yes,yes,no,yes,1-year,A8,250,14,129
+iPhone 6Plus,Apple,GSM/CDMA/HSPA/EVDO/LTE,5.5,401,1080x1920,1(GB),16/64/128,158.1x77.8x7.1,8,iOS,yes,yes,yes,no,yes,1-year,A8,384,24,172
+iPhone SE,Apple,GSM/CDMA/HSPA/EVDO/LTE,4,326,640x1136,2(GB),16/64,123.8x58.6x7.6,12,iOS,yes,yes,yes,no,yes,1-year,A9,240,14,113
+iPhone 7,Apple,GSM/CDMA/HSPA/EVDO/LTE,4.7,326,750x1334,2(GB),32/128/256,138.3x67.1x7.1,12,iOS,yes,yes,yes,no,yes,1-year,A10,240,14,138
+iPhone 7Plus,Apple,GSM/CDMA/HSPA/EVDO/LTE,5.5,401,1080x1920,3(GB),32/128/256,158.2x77.9x7.3,12,iOS,yes,yes,yes,no,yes,1-year,A10,384,21,188
+Galaxy Note,Samsung,GSM/CDMA/HSPA/EVDO/LTE,5.3,285,800x1280,1(GB),16/32,146.9x83x9.7,8,Android,yes,yes,no,yes,no,1-year,Exynos 4210,820,13,178
+Galaxy Note 2,Samsung,GSM/CDMA/HSPA/EVDO/LTE,5.55,267,720x1280,2(GB),16/32/64,151.1x80.5x9.4,8,Android,yes,yes,no,yes,no,1-year,Exynos 4412 Quad,540,18,180
+Galaxy Note 3,Samsung,GSM/HSPA/LTE,5.7,386,1080x1920,3(GB),16/32/65,151.2x79.2x8.3,13,Android,yes,yes,no,yes,no,1-year,Exynos 5 Octa 5420,420,21,168
+Galaxy Note 3 Neo,Samsung,GSM/HSPA/LTE,5.5,267,720x1280,2(GB),16,148.4x77.4x8.6,8,Android,yes,yes,no,yes,no,1-year,Exynos 5 Octa 5260,540,18,163
+Galaxy Note 4,Samsung,GSM/HSPA/LTE,5.7,518,1440x2560,3(GB),32/64,153.5x78.6x8.6,16,Android,yes,yes,no,yes,no,1-year,Exynos 5433,540,20,176
+Galaxy Note Edge,Samsung,GSM/HSPA/LTE,5.6,524,1600x2560,3(GB),32/64,151.3x82.4x8.3,16,Android,yes,yes,no,yes,no,1-year,Exynos 7 Octa 5433,540,18,174
+Galaxy Note 5,Samsung,GSM/HSPA/LTE,5.7,518,1440x2560,4(GB),32/64/128,153.2x76.1x7.6,16,Android,yes,yes,yes,yes,yes,1-year,Exynos 7 Octa 7420,600,22,171
+Galaxy Note 7,Samsung,GSM/HSPA/LTE,5.7,518,1440x2560,4(GB),64,153.5x73.9x7.9,12,Android,yes,yes,yes,yes,yes,1-year,Exynos 8890 Octa,bomb,bomb,169
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Galaxy S,Samsung,GSM/HSPA/LTE,,,,,,,,Android,yes,yes,no,yes,no,1-year,,,,
+Microsoft Lumia 535,Microsoft,GSM/HSPA,5,220,540x960,1(GB),8,140.2x72.4x8.8,5,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 200,552,13,146
+Microsoft Lumia 435,Microsoft,GSM/HSPA,4,233,480x800,1(GB),8,118.1x64.7x11.7,2,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 200,504,11,134
+Microsoft Lumia 532,Microsoft,GSM/HSPA,4,233,480x800,1(GB),8,118.1x65.5x11.6,5,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 200,528,12,136
+Microsoft Lumia 640,Microsoft,GSM/CDMA/HSPA/EVDO/LTE,5,294,720x1280,1(GB),8,141.3x72.2x8.8,8,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 400,864,17,145
+Microsoft Lumia 430,Microsoft,GSM/HSPA,4,235,480x800,1(GB),8,120.5x63.2x10.6,5,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 200,720,8,128
+Microsoft Lumia 540,Microsoft,GSM/HSPA,5,294,720x1280,1(GB),8,144x73.7x8.6,8,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 200,576,15,152
+Microsoft Lumia 950,Microsoft,GSM/HSPA/LTE,5.2,564,1440x2560,3(GB),32,145x73.2x8.2,20,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 808,288,18,150
+Microsoft Lumia 550,Microsoft,GSM/HSPA/LTE,4.7,315,720x1280,1(GB),8,136.1x67.8x9.9,5,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 210,672,14,142
+Microsoft Lumia 650,Microsoft,GSM/HSPA/LTE,5,297,720x1280,1(GB),16,142x70.9x6.9,8,Windows phone,yes,yes,no,yes,no,1-year,Snapdragon 212,624,13,122
