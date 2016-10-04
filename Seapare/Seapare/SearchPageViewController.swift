@@ -157,6 +157,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     // MARK: Actions
     @IBAction func search(_ sender: AnyObject) {
         print("Search!")
+        self.tabBarController!.selectedIndex = 1
     }
     
 }
