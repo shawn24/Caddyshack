@@ -1,0 +1,1 @@
+This week, we prepared for the presentation. We discussed the GUI and database stucture. We construct UI structure.
