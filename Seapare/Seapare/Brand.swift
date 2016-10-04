@@ -9,6 +9,6 @@
 import Foundation
 
 class Brand {
-    var brand_id : Int = 0
+    var brand_id : Int!
     var brand_name : String!
 }

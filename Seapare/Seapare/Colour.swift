@@ -9,11 +9,11 @@
 import Foundation
 
 class Colour {
-    var colour_id : Int = 0
+    var colour_id : Int!
     var colour_name : String!
 }
 
 class ColourPhoneRelation {
-    var device_id : Int = 0
-    var colour_id : Int = 0
+    var device_id : Int!
+    var colour_id : Int!
 }

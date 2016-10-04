@@ -9,7 +9,7 @@
 import Foundation
 
 class Network {
-    var network_id : Int = 0
+    var network_id : Int!
     var network_name : String!
     var frequency : Float!
 }
