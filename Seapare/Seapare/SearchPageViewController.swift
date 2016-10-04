@@ -108,6 +108,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         let picker = textField.inputView
         if picker is UIPickerView {
             (picker as! UIPickerView).reloadAllComponents()
+            (picker as! UIPickerView).selectRow(0, inComponent: 0, animated: true)
         }
     }
     

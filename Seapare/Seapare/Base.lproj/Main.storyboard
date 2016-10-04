@@ -25,93 +25,100 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3P-1b-UjA"/>
-                                    <segue destination="YIr-Sl-RsI" kind="presentation" id="x5h-wC-0Ez"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keyword:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyi-nE-dEc">
-                                <frame key="frameInset" minX="24" minY="42" width="24.36%" height="30"/>
+                                <frame key="frameInset" minX="16" minY="87" width="23.82%" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhX-IX-uvt" userLabel="Brand:">
-                                <frame key="frameInset" minX="24" minY="112" width="24.36%" height="30"/>
+                                <frame key="frameInset" minX="16" minY="157" width="23.82%" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ9-Xa-vKP">
-                                <frame key="frameInset" minX="24" minY="252" width="24.36%" height="30"/>
+                                <frame key="frameInset" minX="16" minY="297" width="23.82%" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capacity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZD-J8-6lJ">
-                                <frame key="frameInset" minX="24" minY="182" width="24.36%" height="30"/>
+                                <frame key="frameInset" minX="16" minY="227" width="23.82%" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDx-s3-s8L">
-                                <frame key="frameInset" minX="24" minY="322" width="24.36%" height="30"/>
+                                <frame key="frameInset" minX="16" minY="367" width="23.82%" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RAM:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g3-aW-Fg7">
-                                <frame key="frameInset" minX="24" minY="392" width="24.36%" height="30"/>
+                                <frame key="frameInset" minX="16" minY="437" width="23.82%" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TGo-jI-B7t">
-                                <frame key="frameInset" minY="42" width="65.18%" height="30" maxX="16"/>
+                                <frame key="frameInset" minY="87" width="66.67%" height="30" maxX="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7J9-WY-EOp" userLabel="Brand Text Field">
-                                <frame key="frameInset" minY="112" width="65.18%" height="30" maxX="16"/>
+                                <frame key="frameInset" minY="157" width="66.67%" height="30" maxX="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-s3-I9k" userLabel="Price Text Field">
-                                <frame key="frameInset" minY="182" width="65.18%" height="30" maxX="16"/>
+                                <frame key="frameInset" minY="227" width="66.67%" height="30" maxX="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-lo-l4X" userLabel="Capacity Text Field">
-                                <frame key="frameInset" minY="252" width="65.18%" height="30" maxX="16"/>
+                                <frame key="frameInset" minY="297" width="66.67%" height="30" maxX="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uv-GF-Um9" userLabel="Camera Text Field">
-                                <frame key="frameInset" minY="322" width="65.18%" height="30" maxX="16"/>
+                                <frame key="frameInset" minY="367" width="66.67%" height="30" maxX="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Feo-yO-0fK" userLabel="RAM Text Field">
-                                <frame key="frameInset" minY="392" width="65.18%" height="30" maxX="16"/>
+                                <frame key="frameInset" minY="437" width="66.67%" height="30" maxX="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbZ-JK-NQz">
+                                <frame key="frameInset" minY="28" width="8.36%" height="4.70%" maxX="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Help Icon"/>
+                                <connections>
+                                    <segue destination="YIr-Sl-RsI" kind="presentation" id="chY-kV-DnJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -139,7 +146,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Result Table View Cell" id="VIZ-y0-urj" customClass="ResultTableViewCell" customModule="Seapare" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="51"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VIZ-y0-urj" id="zqN-f5-ECW">
                                     <frame key="frameInset" width="375" height="50.5"/>
@@ -153,28 +160,22 @@
                             <outlet property="delegate" destination="kIJ-UQ-GC4" id="4GF-7g-GJT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Result" id="L62-Uf-9wO" userLabel="Result">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="IG5-8s-kix">
-                            <connections>
-                                <action selector="Back:" destination="kIJ-UQ-GC4" id="8pt-Q8-YP6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Result" image="Result Icon" id="Afc-m6-Ltc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCG-d4-hBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="-153.37331334332833"/>
+            <point key="canvasLocation" x="-1406" y="1468"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2a-sE-9av">
             <objects>
                 <navigationController id="YIr-Sl-RsI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f6t-Fx-d5E">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="f6t-Fx-d5E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kIJ-UQ-GC4" kind="relationship" relationship="rootViewController" id="jMM-VV-oy3"/>
+                        <segue destination="cJF-bh-Sgr" kind="relationship" relationship="rootViewController" id="Gyg-dN-xcS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eL7-2u-5DK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,8 +193,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9cG-IP-8X5"/>
+                        <segue destination="kIJ-UQ-GC4" kind="relationship" relationship="viewControllers" id="Srm-oC-hkK"/>
                         <segue destination="NUw-UV-6bX" kind="relationship" relationship="viewControllers" id="ajY-hv-9QH"/>
-                        <segue destination="cJF-bh-Sgr" kind="relationship" relationship="viewControllers" id="hUi-Et-XRS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilh-Ll-xKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,15 +244,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Help" image="Help Icon" id="ugw-LJ-m7L"/>
+                    <navigationItem key="navigationItem" id="CgU-pf-tYY">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="2CT-82-jch">
+                            <connections>
+                                <action selector="Back:" destination="cJF-bh-Sgr" id="gcc-hz-8fb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je5-Nj-rsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1273" y="1446"/>
+            <point key="canvasLocation" x="1620" y="690"/>
         </scene>
     </scenes>
     <resources>
         <image name="Compare Icon" width="30" height="30"/>
         <image name="Help Icon" width="540" height="540"/>
+        <image name="Result Icon" width="30" height="30"/>
     </resources>
 </document>

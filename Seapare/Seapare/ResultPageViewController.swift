@@ -24,13 +24,6 @@ class ResultPageViewController: UITableViewController,UINavigationControllerDele
     }
     
     
-    // MARK: Actions
-    @IBAction func Back(_ sender: AnyObject) {
-        
-        dismiss(animated: true, completion: nil)
-
-    }
-    
     // MARK: Table configurations
     override func numberOfSections(in tableView: UITableView) -> Int {
         
