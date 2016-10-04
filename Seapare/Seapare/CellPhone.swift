@@ -9,10 +9,10 @@
 import Foundation
 
 class CellPhone {
-    var device_id : Int = 0
-    var phone_id : Int = 0
-    var network_id : Int = 0
-    var processor_id : Int = 0
+    var device_id : Int!
+    var phone_id : Int!
+    var network_id : Int!
+    var processor_id : Int!
     var cellphone_name : String!
     var screen_size : Float!
     var ppi : Int!

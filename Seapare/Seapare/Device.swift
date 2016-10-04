@@ -9,11 +9,11 @@
 import Foundation
 
 class Device {
-    var device_id : Int = 0
-    var device_type_id : Int = 0
+    var device_id : Int!
+    var device_type_id : Int!
 }
 
 class DeviceType {
-    var device_type_id : Int = 0
+    var device_type_id : Int!
     var devie_type_name : String!
 }

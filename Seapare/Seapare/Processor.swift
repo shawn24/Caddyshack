@@ -9,8 +9,8 @@
 import Foundation
 
 class Processor {
-    var processor_id : Int = 0
-    var device_type_id : Int = 0
+    var processor_id : Int!
+    var device_type_id : Int!
     var processor_name : String!
     var processor_benchmark : String!
     var core_number : Int!
