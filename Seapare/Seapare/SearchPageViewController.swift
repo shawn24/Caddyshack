@@ -43,12 +43,25 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         
         // Change the text fields' input view to picker view
         let pickerView = UIPickerView()
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
         pickerView.delegate = self
+        let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SearchPageViewController.endEditing))
+        toolBar.setItems([space,doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+        
         brandTextPicker.inputView = pickerView
+        brandTextPicker.inputAccessoryView = toolBar
         capacityTextPicker.inputView = pickerView
+        capacityTextPicker.inputAccessoryView = toolBar
         priceTextPicker.inputView = pickerView
+        priceTextPicker.inputAccessoryView = toolBar
         cameraTextPicker.inputView = pickerView
+        cameraTextPicker.inputAccessoryView = toolBar
         ramTextPicker.inputView = pickerView
+        ramTextPicker.inputAccessoryView = toolBar
         
     }
 
@@ -76,6 +89,10 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         
         return nil
         
+    }
+    
+    func endEditing(){
+        view.endEditing(true)
     }
     
     // MARK: UITextFieldDelegate
