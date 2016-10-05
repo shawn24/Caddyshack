@@ -1,0 +1,6 @@
+framework module Pods_Seapare {
+  umbrella header "Pods-Seapare-umbrella.h"
+
+  export *
+  module * { export * }
+}
