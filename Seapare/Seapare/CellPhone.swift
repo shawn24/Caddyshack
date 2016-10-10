@@ -8,8 +8,7 @@
 
 import Foundation
 
-class CellPhone {
-    var device_id : Int!
+class CellPhone : Device{
     var phone_id : Int!
     var network_id : Int!
     var processor_id : Int!
