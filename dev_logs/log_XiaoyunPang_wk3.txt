@@ -1,0 +1,4 @@
+Week 2: Oct. 2 - Oct. 9
+
+- Implemented class inheritance
+- Discussed possible functions
