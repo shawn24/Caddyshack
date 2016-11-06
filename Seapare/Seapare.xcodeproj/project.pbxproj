@@ -24,9 +24,6 @@
 		3A2E70DC1DA343C100E25FD8 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70DB1DA343C100E25FD8 /* Brand.swift */; };
 		3A2E70DE1DA3441E00E25FD8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70DD1DA3441E00E25FD8 /* Device.swift */; };
 		3A2E70E01DA345FD00E25FD8 /* CellPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70DF1DA345FD00E25FD8 /* CellPhone.swift */; };
-		3A2E70E21DA34B0700E25FD8 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70E11DA34B0700E25FD8 /* Processor.swift */; };
-		3A2E70E41DA34BC800E25FD8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70E31DA34BC800E25FD8 /* Network.swift */; };
-		3A2E70E61DA34C1C00E25FD8 /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70E51DA34C1C00E25FD8 /* Colour.swift */; };
 		58917D3A3BC43B9E9CAE9AA4 /* Pods_Seapare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9748CF79BB8936297487C20 /* Pods_Seapare.framework */; };
 		B96B88D6A533707E4A8824EE /* Pods_SeapareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDD7A64C4D3E3B49879086B /* Pods_SeapareTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,9 +71,6 @@
 		3A2E70DB1DA343C100E25FD8 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		3A2E70DD1DA3441E00E25FD8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		3A2E70DF1DA345FD00E25FD8 /* CellPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPhone.swift; sourceTree = "<group>"; };
-		3A2E70E11DA34B0700E25FD8 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
-		3A2E70E31DA34BC800E25FD8 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		3A2E70E51DA34C1C00E25FD8 /* Colour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colour.swift; sourceTree = "<group>"; };
 		72EE085032CB8DF4C9601F94 /* Pods_SeapareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeapareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D66220F1B8FF65E502DFC5 /* Pods-Seapare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seapare.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seapare/Pods-Seapare.release.xcconfig"; sourceTree = "<group>"; };
 		A56624FF64668A85039F748E /* Pods-SeapareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeapareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeapareTests/Pods-SeapareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,9 +169,6 @@
 				3A1C06991DB0B7D8009AC213 /* CellPhoneSearchResultList.swift */,
 				3A2E70DD1DA3441E00E25FD8 /* Device.swift */,
 				3A2E70DF1DA345FD00E25FD8 /* CellPhone.swift */,
-				3A2E70E11DA34B0700E25FD8 /* Processor.swift */,
-				3A2E70E31DA34BC800E25FD8 /* Network.swift */,
-				3A2E70E51DA34C1C00E25FD8 /* Colour.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -508,11 +499,8 @@
 			files = (
 				2551CE751DA03A9000B7410A /* ResultPageViewController.swift in Sources */,
 				3A2E70DC1DA343C100E25FD8 /* Brand.swift in Sources */,
-				3A2E70E41DA34BC800E25FD8 /* Network.swift in Sources */,
-				3A2E70E21DA34B0700E25FD8 /* Processor.swift in Sources */,
 				29724C291D9EF765001140B6 /* SearchPageViewController.swift in Sources */,
 				3A2E70DE1DA3441E00E25FD8 /* Device.swift in Sources */,
-				3A2E70E61DA34C1C00E25FD8 /* Colour.swift in Sources */,
 				2551CE791DA03B9000B7410A /* TabBarController.swift in Sources */,
 				29724C271D9EF765001140B6 /* AppDelegate.swift in Sources */,
 				3A1C069A1DB0B7D8009AC213 /* CellPhoneSearchResultList.swift in Sources */,
