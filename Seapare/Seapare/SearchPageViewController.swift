@@ -176,7 +176,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBAction func search(_ sender: AnyObject) {
         print("Search!")
         
-            let phones = getCellPhones(keyword: "")
+            let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
             for (index, element) in phones.getPhones().enumerated() {
                 let name:String = (element as CellPhone).cellphone_name
                 print("Item \(index): \(name)")
@@ -195,23 +195,10 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     func getCellPhones(keyword: String?, brand: String?, capacity: String?, price: String?, camera: String?, ram: String?) -> CellPhoneSearchResultsList{
      
-        var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id where "
-        var keywordQueryString = ""
-        var brandQueryString = ""
-        var capacityQueryString = ""
-        var priceQueryString = ""
-        var cameraQueryString = ""
-        var ramQueryString = ""
-        
-        if brand != nil{
-            brandQueryString = " pt.brand_id = \(brand) "
-            queryString.append(brandQueryString)
-        }
-        
-        
+        var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id "
         
         do{
-            let phones = try self.makeQuery(query: "order by pt.device_id asc")
+            let phones = try self.makeQuery(query: queryString)
             for (index, element) in phones.getPhones().enumerated() {
                 let name:String = (element as CellPhone).cellphone_name
                 print("Item \(index): \(name)")
