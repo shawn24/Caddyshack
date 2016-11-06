@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GRDB
 
 class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
     
@@ -175,12 +176,40 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBAction func search(_ sender: AnyObject) {
         print("Search!")
         
-        if let t = self.tabBarController {
-            t.selectedIndex = 1
-        } else {
-            print("tabBarController is nil")
+        do{
+            let phones = try getCellPhonesByKeyword(keyword: "")
+            for (index, element) in phones.getPhones().enumerated() {
+                let name:String = (element as CellPhone).devie_type_name
+                print("Item \(index): \(name)")
+            }
+            
+            if let t = self.tabBarController {
+                t.selectedIndex = 1
+            } else {
+                print("tabBarController is nil")
+            }
         }
+        catch let error as NSError {
+            print("Could not create audio player: \(error)")
+        }
+        
+    
+        
     }
     
+
+    func getCellPhonesByKeyword(keyword: String) throws -> CellPhoneSearchResultsList{
+        let phoneList = CellPhoneSearchResultsList()
+        dbQueue.inDatabase { db in
+            for row in Row.fetch(db, "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id order by pt.device_id asc") {
+                let phone = CellPhone()
+                phone.devie_type_name = row.value(named: "dt.device_id")
+                phone.devie_type_name = row.value(named: "name")
+                phoneList.append(phone: phone)
+            }
+        }
+        
+        return phoneList
+    }
 }
 

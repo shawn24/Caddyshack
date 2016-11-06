@@ -8,6 +8,18 @@
 
 import Foundation
 
-class CellPhoneSearchResultsList : NSArray {
+
+
+class CellPhoneSearchResultsList {
+    
+    var phones = [CellPhone]()
+    
+    func append(phone: CellPhone){
+        phones.append(phone)
+    }
+    
+    func getPhones() -> [CellPhone]{
+        return phones
+    }
     
 }

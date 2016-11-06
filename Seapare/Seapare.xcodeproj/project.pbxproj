@@ -13,6 +13,7 @@
 		2551CE771DA03AF900B7410A /* HelpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE761DA03AF900B7410A /* HelpPageViewController.swift */; };
 		2551CE791DA03B9000B7410A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE781DA03B9000B7410A /* TabBarController.swift */; };
 		2551CE7D1DA0556E00B7410A /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */; };
+		2911E3601DCFBC960067F693 /* CoreDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E35F1DCFBC960067F693 /* CoreDataAccess.swift */; };
 		29724C271D9EF765001140B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C261D9EF765001140B6 /* AppDelegate.swift */; };
 		29724C291D9EF765001140B6 /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C281D9EF765001140B6 /* SearchPageViewController.swift */; };
 		29724C2C1D9EF765001140B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29724C2A1D9EF765001140B6 /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 		2551CE761DA03AF900B7410A /* HelpPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPageViewController.swift; sourceTree = "<group>"; };
 		2551CE781DA03B9000B7410A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		2911E35F1DCFBC960067F693 /* CoreDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataAccess.swift; sourceTree = "<group>"; };
+		2911E3611DCFD1B60067F693 /* seapare.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = seapare.db; sourceTree = "<group>"; };
 		29724C231D9EF765001140B6 /* Seapare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seapare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29724C261D9EF765001140B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29724C281D9EF765001140B6 /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		29724C1A1D9EF765001140B6 = {
 			isa = PBXGroup;
 			children = (
+				2911E3611DCFD1B60067F693 /* seapare.db */,
 				29724C251D9EF765001140B6 /* Seapare */,
 				29724C3A1D9EF765001140B6 /* SeapareTests */,
 				29724C451D9EF765001140B6 /* SeapareUITests */,
@@ -185,6 +189,7 @@
 		29724C551D9EF7CE001140B6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2911E35F1DCFBC960067F693 /* CoreDataAccess.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				2528CEA81DA07E6400CEBD9A /* ComparePageViewController.swift in Sources */,
 				3A2E70E01DA345FD00E25FD8 /* CellPhone.swift in Sources */,
 				2551CE771DA03AF900B7410A /* HelpPageViewController.swift in Sources */,
+				2911E3601DCFBC960067F693 /* CoreDataAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
