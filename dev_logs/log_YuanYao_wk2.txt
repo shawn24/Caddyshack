@@ -1,0 +1,4 @@
+Sep 30
+ - designed database structure and app fundemental architecture with the group
+ - created initial xcode project
+ - reading libs details for database-related feature implementation

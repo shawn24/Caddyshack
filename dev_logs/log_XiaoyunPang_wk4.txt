@@ -1,0 +1,5 @@
+Week 4: Oct. 10 - Oct. 16
+
+- Implemented compare functions for cellphones
+- Created compare list class
+- Discussed classes structures and further work

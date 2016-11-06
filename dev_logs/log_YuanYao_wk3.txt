@@ -1,0 +1,5 @@
+Oct 2 - Oct 9
+ - Had two group talks on Tuesday and Thursday to coordinate everyone's workload
+ - Discussed APIs for entity classes
+ - Decided the Lib for db access
+
