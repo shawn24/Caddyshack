@@ -176,10 +176,9 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBAction func search(_ sender: AnyObject) {
         print("Search!")
         
-        do{
-            let phones = try getCellPhonesByKeyword(keyword: "")
+            let phones = getCellPhones(keyword: "")
             for (index, element) in phones.getPhones().enumerated() {
-                let name:String = (element as CellPhone).devie_type_name
+                let name:String = (element as CellPhone).cellphone_name
                 print("Item \(index): \(name)")
             }
             
@@ -188,23 +187,50 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
             } else {
                 print("tabBarController is nil")
             }
-        }
-        catch let error as NSError {
-            print("Could not create audio player: \(error)")
-        }
+        
         
     
         
     }
     
+    func getCellPhones(keyword: String?, brand: String?, capacity: String?, price: String?, camera: String?, ram: String?) -> CellPhoneSearchResultsList{
+     
+        var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id where "
+        var keywordQueryString = ""
+        var brandQueryString = ""
+        var capacityQueryString = ""
+        var priceQueryString = ""
+        var cameraQueryString = ""
+        var ramQueryString = ""
+        
+        if brand != nil{
+            brandQueryString = " pt.brand_id = \(brand) "
+            queryString.append(brandQueryString)
+        }
+        
+        
+        
+        do{
+            let phones = try self.makeQuery(query: "order by pt.device_id asc")
+            for (index, element) in phones.getPhones().enumerated() {
+                let name:String = (element as CellPhone).cellphone_name
+                print("Item \(index): \(name)")
+            }
+            return phones
+        }
+        catch let error as NSError {
+            print("Could not get phones by keyword: \(error)")
+        }
+        return CellPhoneSearchResultsList()
+    }
 
-    func getCellPhonesByKeyword(keyword: String) throws -> CellPhoneSearchResultsList{
+    func makeQuery(query: String) throws -> CellPhoneSearchResultsList{
         let phoneList = CellPhoneSearchResultsList()
         dbQueue.inDatabase { db in
-            for row in Row.fetch(db, "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id order by pt.device_id asc") {
+            for row in Row.fetch(db, query) {
                 let phone = CellPhone()
-                phone.devie_type_name = row.value(named: "dt.device_id")
-                phone.devie_type_name = row.value(named: "name")
+                phone.devie_type_name = row.value(named: "")
+                phone.cellphone_name = row.value(named: "name")
                 phoneList.append(phone: phone)
             }
         }
