@@ -21,6 +21,7 @@
 		29724C311D9EF765001140B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29724C2F1D9EF765001140B6 /* LaunchScreen.storyboard */; };
 		29724C3C1D9EF765001140B6 /* SeapareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C3B1D9EF765001140B6 /* SeapareTests.swift */; };
 		29724C471D9EF765001140B6 /* SeapareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C461D9EF765001140B6 /* SeapareUITests.swift */; };
+		29B86B171DCFDE120069ED0A /* seapare.db in Resources */ = {isa = PBXBuildFile; fileRef = 29B86B161DCFDE120069ED0A /* seapare.db */; };
 		3A1C069A1DB0B7D8009AC213 /* CellPhoneSearchResultList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C06991DB0B7D8009AC213 /* CellPhoneSearchResultList.swift */; };
 		3A2E70DC1DA343C100E25FD8 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70DB1DA343C100E25FD8 /* Brand.swift */; };
 		3A2E70DE1DA3441E00E25FD8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E70DD1DA3441E00E25FD8 /* Device.swift */; };
@@ -55,7 +56,6 @@
 		2551CE781DA03B9000B7410A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		2911E35F1DCFBC960067F693 /* CoreDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataAccess.swift; sourceTree = "<group>"; };
-		2911E3611DCFD1B60067F693 /* seapare.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = seapare.db; sourceTree = "<group>"; };
 		29724C231D9EF765001140B6 /* Seapare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seapare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29724C261D9EF765001140B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29724C281D9EF765001140B6 /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +69,7 @@
 		29724C421D9EF765001140B6 /* SeapareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeapareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29724C461D9EF765001140B6 /* SeapareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeapareUITests.swift; sourceTree = "<group>"; };
 		29724C481D9EF765001140B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B86B161DCFDE120069ED0A /* seapare.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = seapare.db; sourceTree = "<group>"; };
 		2ABAD7F9333D052FE164C583 /* Pods-SeapareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeapareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeapareTests/Pods-SeapareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1C06991DB0B7D8009AC213 /* CellPhoneSearchResultList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellPhoneSearchResultList.swift; sourceTree = "<group>"; };
 		3A2E70DB1DA343C100E25FD8 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		29724C1A1D9EF765001140B6 = {
 			isa = PBXGroup;
 			children = (
-				2911E3611DCFD1B60067F693 /* seapare.db */,
 				29724C251D9EF765001140B6 /* Seapare */,
 				29724C3A1D9EF765001140B6 /* SeapareTests */,
 				29724C451D9EF765001140B6 /* SeapareUITests */,
@@ -136,6 +136,7 @@
 		29724C251D9EF765001140B6 /* Seapare */ = {
 			isa = PBXGroup;
 			children = (
+				29B86B161DCFDE120069ED0A /* seapare.db */,
 				29724C541D9EF7BE001140B6 /* Entity */,
 				29724C551D9EF7CE001140B6 /* Utility */,
 				29724C561D9EF7EF001140B6 /* ViewController */,
@@ -340,6 +341,7 @@
 				29724C311D9EF765001140B6 /* LaunchScreen.storyboard in Resources */,
 				29724C2E1D9EF765001140B6 /* Assets.xcassets in Resources */,
 				29724C2C1D9EF765001140B6 /* Main.storyboard in Resources */,
+				29B86B171DCFDE120069ED0A /* seapare.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,9 +21,12 @@ func CoreDataAccess(){
 func setupDatabase(_ application: UIApplication) throws {
     
     // Connect to the database
-    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
-    let databasePath = documentsPath.appendingPathComponent("../seapare.db")
-    dbQueue = try DatabaseQueue(path: databasePath)
+    //let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .userDomainMask, true).first! as NSString
+    //let databasePath = documentsPath.appendingPathComponent("seapare.db")
+    //print("path: \(databasePath)")
+    let path = Bundle.main.path(forResource: "seapare", ofType: "db")
+    print("db file path: \(path!)")
+    dbQueue = try DatabaseQueue(path: path!)
     dbQueue.setupMemoryManagement(in: application)
     print("Setup dbQueue \(dbQueue)")
     
