@@ -13,6 +13,4 @@ class Device {
     var device_type_id : Int!
     var devie_type_name : String!
     var brand_obj : Brand!
-    var processor_obj : Processor!
-    var colour_obj : Colour!
 }
