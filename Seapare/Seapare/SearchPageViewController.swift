@@ -202,7 +202,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         var cameraString = ""
         var ramString = ""
         var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id"
-        if (keyword != nil) { keywordString = ("name = \"" + keyword! + "\"")}
+        if (keyword != nil) { keywordString = ("name like \"%" + keyword! + "%\"")}
         if (brand != nil) { brandString = "brand_name = \"" + brand! + "\""}
         if (capacity != nil) { capacityString = "capacity = " + capacity! }
         if (price != nil) { priceString = "price_cdn = " + price!}
