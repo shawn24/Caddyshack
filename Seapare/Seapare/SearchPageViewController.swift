@@ -194,8 +194,31 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     }
     
     func getCellPhones(keyword: String?, brand: String?, capacity: String?, price: String?, camera: String?, ram: String?) -> CellPhoneSearchResultsList{
-     
-        var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id "
+        
+        var keywordString = ""
+        var brandString = ""
+        var capacityString = ""
+        var priceString = ""
+        var cameraString = ""
+        var ramString = ""
+        var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id"
+        if (keyword != nil) { keywordString = ("name = \"" + keyword! + "\"")}
+        if (brand != nil) { brandString = "brand_name = \"" + brand! + "\""}
+        if (capacity != nil) { capacityString = "capacity = " + capacity! }
+        if (price != nil) { priceString = "price_cdn = " + price!}
+        if (camera != nil) { cameraString = "camera_mp = " + camera!}
+        if (ram != nil) { ramString = "ram_mb = " + ram!}
+        
+        var criteria_list = [keywordString, brandString, capacityString, priceString, cameraString, ramString].filter{(str) in str != ""}
+        if !criteria_list.isEmpty {
+            if criteria_list.count == 1 {
+                queryString += " where " + criteria_list[0]
+            }
+            else {
+                let criteriaString = criteria_list.joined(separator: " and ")
+                queryString += " where " + criteriaString
+            }
+        }
         
         do{
             let phones = try self.makeQuery(query: queryString)
@@ -216,8 +239,37 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         dbQueue.inDatabase { db in
             for row in Row.fetch(db, query) {
                 let phone = CellPhone()
-                phone.devie_type_name = row.value(named: "")
+                phone.device_id = row.value(named: "device_id")
+                phone.device_type_id = row.value(named: "device_id")
+                phone.device_type_name = row.value(named: "device_type_name")
+                let brand = Brand()
+                brand.brand_id = row.value(named: "brand_id")
+                brand.brand_name = row.value(named: "brand_name")
+                phone.brand_obj = brand
+                
                 phone.cellphone_name = row.value(named: "name")
+                phone.phone_id = row.value(named: "phone_id")
+                phone.colour = row.value(named: "color")
+                phone.price = row.value(named: "price_cdn")
+                phone.network = row.value(named: "network")
+                phone.screen_size = row.value(named: "screen_size_inch")
+                phone.ppi = row.value(named: "ppi")
+                phone.resolution = row.value(named: "resolution")
+                phone.ram = row.value(named: "ram_mb")
+                phone.capacity = row.value(named: "capacity")
+                phone.device_size = row.value(named: "device_size_mm")
+                phone.camera_resolution = row.value(named: "camera_mp")
+                phone.platform = row.value(named: "platform")
+                phone.gps_flag = row.value(named: "gps")
+                phone.bluetooth_flag = row.value(named: "bluetooth")
+                phone.nfc_flag = row.value(named: "nfc")
+                phone.memory_card_support_flag = row.value(named: "memory_card")
+                phone.fingerprint_flag = row.value(named: "fingerprint")
+                phone.warranty = row.value(named: "warranty_m")
+                phone.processor = row.value(named: "processor")
+                phone.standby_hour = row.value(named: "standby_h")
+                phone.talktime_hour = row.value(named: "talktime_h")
+                phone.weight = row.value(named: "weight_g")
                 phoneList.append(phone: phone)
             }
         }
