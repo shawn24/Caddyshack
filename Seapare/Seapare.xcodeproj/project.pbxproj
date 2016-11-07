@@ -302,6 +302,7 @@
 				TargetAttributes = {
 					29724C221D9EF765001140B6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = F5P6PRMN7F;
 						ProvisioningStyle = Automatic;
 					};
 					29724C361D9EF765001140B6 = {
@@ -672,7 +673,7 @@
 			baseConfigurationReference = 008A49CFC4B37C4C4CE8B5E3 /* Pods-Seapare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F5P6PRMN7F;
 				INFOPLIST_FILE = Seapare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Caddyshack.Seapare;
@@ -686,7 +687,7 @@
 			baseConfigurationReference = 85D66220F1B8FF65E502DFC5 /* Pods-Seapare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F5P6PRMN7F;
 				INFOPLIST_FILE = Seapare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Caddyshack.Seapare;

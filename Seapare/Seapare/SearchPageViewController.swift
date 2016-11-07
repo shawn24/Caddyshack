@@ -20,6 +20,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var priceTextPicker: UITextField!
     @IBOutlet weak var cameraTextPicker: UITextField!
     @IBOutlet weak var ramTextPicker: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
     
     var brandOption = ["","Apple", "Sumsung", "Huawei", "SuperSuperHotPhone", "HAHA"]
@@ -62,6 +63,8 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         cameraTextPicker.inputAccessoryView = toolBar
         ramTextPicker.inputView = pickerView
         ramTextPicker.inputAccessoryView = toolBar
+        
+        searchButton.layer.cornerRadius = 5
         
     }
 
