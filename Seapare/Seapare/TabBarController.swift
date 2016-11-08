@@ -9,4 +9,5 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    var cellPhoneSearchResultList:CellPhoneSearchResultsList?
 }

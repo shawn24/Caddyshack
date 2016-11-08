@@ -8,14 +8,37 @@
 
 import UIKit
 
-class ResultPageViewController: UITableViewController,UINavigationControllerDelegate {
+class ResultPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: Column headers
-    var titles: [String] = ["Name","Brand", "Price","Capacity","RAM","Price","Camera","Compare"]
+    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var scrollView: UIScrollView!
+
+    var cellPhoneSearchResultList:CellPhoneSearchResultsList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // get phone list from its tabBarController
+        if let t = self.tabBarController as? TabBarController {
+            if let phones = t.cellPhoneSearchResultList {
+                self.cellPhoneSearchResultList = phones
+            } else {
+                print("t.cellPhoneSearchResultList is nil")
+            }
+        } else {
+            print("tabBarController is nil")
+        }
+        /*
+        let sframe = scrollView.frame
+        scrollView.transform = CGAffineTransform.init(rotationAngle: CGFloat(-M_PI_2))
+        scrollView.frame = sframe
+        let tframe = table.frame
+        table.transform = CGAffineTransform.init(rotationAngle: CGFloat(M_PI_2))
+        table.frame = tframe
+ */
+        
+        table.dataSource = self
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,26 +48,40 @@ class ResultPageViewController: UITableViewController,UINavigationControllerDele
     
     
     // MARK: Table configurations
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return cellPhoneSearchResultList.phones.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result Table View Cell", for: indexPath as IndexPath) as! ResultTableViewCell
+        if indexPath.row == 0 {
+            cell.nameCell.text = "name"
+            cell.priceCell.text = "price"
+            cell.brandCell.text = "brand"
+            cell.cameraCell.text = "camera"
+            cell.capacityCell.text = "capacity"
+            cell.ramCell.text = "ram"
+            cell.compareCell.titleLabel?.text = "Compare"
+            
+        } else {
+            let phone = cellPhoneSearchResultList.phones[indexPath.row-1]
+            cell.nameCell.text = phone.cellphone_name
+            cell.brandCell.text = phone.brand_obj.brand_name
+            cell.priceCell.text = "\(phone.price!)"
+            cell.cameraCell.text = "\(phone.camera_resolution!)"
+            cell.capacityCell.text = "\(phone.capacity!)"
+            cell.ramCell.text = "\(phone.ram!)"
+            cell.compareCell.titleLabel?.text = "+"
+        }
         
         return cell
     }
-    
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
+
 }
 

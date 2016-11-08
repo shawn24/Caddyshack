@@ -149,36 +149,6 @@
             </objects>
             <point key="canvasLocation" x="-274" y="-153"/>
         </scene>
-        <!--Result Table View Controller-->
-        <scene sceneID="LuJ-HW-dH2">
-            <objects>
-                <tableViewController id="kIJ-UQ-GC4" userLabel="Result Table View Controller" customClass="ResultPageViewController" customModule="Seapare" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" id="IQ7-7j-cfK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Result Table View Cell" id="VIZ-y0-urj" customClass="ResultTableViewCell" customModule="Seapare" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="51"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VIZ-y0-urj" id="zqN-f5-ECW">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="kIJ-UQ-GC4" id="mnp-L9-B8s"/>
-                            <outlet property="delegate" destination="kIJ-UQ-GC4" id="4GF-7g-GJT"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Result" image="Result Icon" id="Afc-m6-Ltc"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zCG-d4-hBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-274" y="1442"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2a-sE-9av">
             <objects>
@@ -206,7 +176,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="9cG-IP-8X5"/>
-                        <segue destination="kIJ-UQ-GC4" kind="relationship" relationship="viewControllers" id="Srm-oC-hkK"/>
+                        <segue destination="2lj-NA-hiP" kind="relationship" relationship="viewControllers" id="ZVb-uy-5hV"/>
                         <segue destination="NUw-UV-6bX" kind="relationship" relationship="viewControllers" id="ajY-hv-9QH"/>
                     </connections>
                 </tabBarController>
@@ -214,20 +184,66 @@
             </objects>
             <point key="canvasLocation" x="-1586" y="690"/>
         </scene>
+        <!--Result Page View Controller-->
+        <scene sceneID="dWu-Yn-0M0">
+            <objects>
+                <viewController id="2lj-NA-hiP" userLabel="Result Page View Controller" customClass="ResultPageViewController" customModule="Seapare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BCK-pE-4hg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ssq-dp-lN5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iUO-0z-REe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3o-Ph-yfq">
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="elC-dQ-kFR">
+                                        <rect key="frame" x="8" y="8" width="1056" height="1091"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Result Table View Cell" id="wzn-rd-yUc" customClass="ResultTableViewCell" customModule="Seapare" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="1056" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wzn-rd-yUc" id="WHt-kb-P9E">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1056" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Result" image="Result Icon" id="D7T-Zg-bMB"/>
+                    <connections>
+                        <outlet property="scrollView" destination="J3o-Ph-yfq" id="vhW-4z-xQQ"/>
+                        <outlet property="table" destination="elC-dQ-kFR" id="1WP-Sj-I4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsB-jO-eNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1586.4000000000001" y="1551.2743628185908"/>
+        </scene>
         <!--Compare Page View Controller-->
         <scene sceneID="I9Z-oY-qEo">
             <objects>
                 <tableViewController id="NUw-UV-6bX" userLabel="Compare Page View Controller" customClass="ComparePageViewController" customModule="Seapare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0c1-Ud-GdN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CU3-UG-OpR">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CU3-UG-OpR" id="zbj-py-nd0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -273,6 +289,6 @@
     <resources>
         <image name="Compare Icon" width="30" height="30"/>
         <image name="Help Icon" width="540" height="540"/>
-        <image name="Result Icon" width="30" height="30"/>
+        <image name="Result Icon" width="540" height="540"/>
     </resources>
 </document>

@@ -177,23 +177,21 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     // MARK: Actions
     @IBAction func search(_ sender: AnyObject) {
-        print("Search!")
         
-            let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
+        let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
+        /*
             for (index, element) in phones.getPhones().enumerated() {
                 let name:String = (element as CellPhone).cellphone_name
                 print("Item \(index): \(name)")
             }
+ */
             
-            if let t = self.tabBarController {
-                t.selectedIndex = 1
-            } else {
-                print("tabBarController is nil")
-            }
-        
-        
-    
-        
+        if let t = self.tabBarController as? TabBarController {
+            t.cellPhoneSearchResultList = phones
+            t.selectedIndex = 1
+        } else {
+            print("tabBarController is nil")
+        }
     }
     
     func getCellPhones(keyword: String?, brand: String?, capacity: String?, price: String?, camera: String?, ram: String?) -> CellPhoneSearchResultsList{
@@ -225,10 +223,12 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         
         do{
             let phones = try self.makeQuery(query: queryString)
+            /*
             for (index, element) in phones.getPhones().enumerated() {
                 let name:String = (element as CellPhone).cellphone_name
                 print("Item \(index): \(name)")
             }
+ */
             return phones
         }
         catch let error as NSError {
