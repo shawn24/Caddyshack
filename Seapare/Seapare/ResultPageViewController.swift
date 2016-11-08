@@ -36,6 +36,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         table.transform = CGAffineTransform.init(rotationAngle: CGFloat(M_PI_2))
         table.frame = tframe
  */
+        //table.frame.size = table.contentSize
         
         table.dataSource = self
         
@@ -55,7 +56,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cellPhoneSearchResultList.phones.count
+        return cellPhoneSearchResultList.phones.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -69,6 +70,8 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.ramCell.text = "ram"
             cell.compareCell.titleLabel?.text = "Compare"
             
+        } else if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
+        
         } else {
             let phone = cellPhoneSearchResultList.phones[indexPath.row-1]
             cell.nameCell.text = phone.cellphone_name
@@ -79,6 +82,12 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.ramCell.text = "\(phone.ram!)"
             cell.compareCell.titleLabel?.text = "+"
         }
+        
+        
+        print(tableView.contentSize)
+        tableView.contentSize = CGSize(width: cell.compareCell.frame.width + cell.compareCell.frame.origin.x,height:tableView.contentSize.height)
+        tableView.frame.size = tableView.contentSize
+        scrollView.contentSize = tableView.frame.size
         
         return cell
     }
