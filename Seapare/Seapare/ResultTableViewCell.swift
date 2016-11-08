@@ -32,7 +32,7 @@ class ResultTableViewCell: UITableViewCell {
         capacityCell = UILabel()
         ramCell = UILabel()
         cameraCell = UILabel()
-        compareCell = UIButton()
+        compareCell = UIButton(type: .roundedRect)
         
         cellCollection = Array<UIView>()
         

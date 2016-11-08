@@ -68,7 +68,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.cameraCell.text = "camera"
             cell.capacityCell.text = "capacity"
             cell.ramCell.text = "ram"
-            cell.compareCell.titleLabel?.text = "Compare"
+            cell.compareCell.setTitle("compare", for: .normal)
             
         } else if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
         
@@ -80,7 +80,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.cameraCell.text = "\(phone.camera_resolution!)"
             cell.capacityCell.text = "\(phone.capacity!)"
             cell.ramCell.text = "\(phone.ram!)"
-            cell.compareCell.titleLabel?.text = "+"
+            cell.compareCell.setTitle("+", for: .normal)
         }
         
         
