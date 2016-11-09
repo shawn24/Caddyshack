@@ -33,6 +33,7 @@ class CellPhone : Device{
     var talktime_hour : Int!
     var weight : Int!
     
+    func compareName(c : CellPhone) -> Bool { return self.cellphone_name < c.cellphone_name }
     
     func comparePrice(c : CellPhone) -> Float { return self.price - c.price }
     
