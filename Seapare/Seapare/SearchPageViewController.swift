@@ -22,11 +22,11 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var ramTextPicker: UITextField!
     
     
-    var brandOption = ["","Apple", "Sumsung", "Huawei", "SuperSuperHotPhone", "HAHA"]
-    var capacityOption = ["","capacity","capacity2"]
-    var priceOption = ["","price","price2"]
-    var cameraOption = ["","camera","camera2"]
-    var ramOption = ["","ram","ram2"]
+    var brandOption = ["","Apple", "Sumsung", "Microsoft", "onePlus"]
+    var capacityOption = ["","8G","16G","32G","64G","128G"]
+    var priceOption = ["","0-200","200-500","500-700","700-1000","1000-"]
+    var cameraOption = ["","2MP","3MP","6MP","8MP","12MP"]
+    var ramOption = ["","512MB","1GB","1.5GB","2GB","3GB","4GB","6GB"]
     
     var selectedPickerOption:Array<String>?
     var selectedTextField:UITextField?

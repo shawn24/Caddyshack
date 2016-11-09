@@ -13,6 +13,9 @@ class ResultPageViewController: UITableViewController,UINavigationControllerDele
     // MARK: Column headers
     var titles: [String] = ["Name","Brand", "Price","Capacity","RAM","Price","Camera","Compare"]
     
+    override func viewDidSearch(){
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
