@@ -22,4 +22,14 @@ class CellPhoneSearchResultsList {
         return phones
     }
     
+    func sortByName(_ cellList : [CellPhone]) -> [CellPhone]{
+        guard phones.count > 1 else { return phones }
+        
+        let pivot = cellList[cellList.count/2]
+        let left = cellList.filter { ($0).cellphone_name < pivot.cellphone_name }
+        let equal = cellList.filter { ($0).cellphone_name == pivot.cellphone_name }
+        let right = cellList.filter { ($0).cellphone_name > pivot.cellphone_name }
+        return sortByName(left) + equal + sortByName(right)
+    }
+    
 }
