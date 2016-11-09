@@ -209,7 +209,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="327" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wzn-rd-yUc" id="WHt-kb-P9E">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -233,17 +233,17 @@
         <!--Compare Page View Controller-->
         <scene sceneID="I9Z-oY-qEo">
             <objects>
-                <tableViewController id="NUw-UV-6bX" userLabel="Compare Page View Controller" customClass="ComparePageViewController" customModule="Seapare" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="NUw-UV-6bX" userLabel="Compare Page View Controller" customClass="ComparePageViewController" customModule="Seapare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0c1-Ud-GdN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CU3-UG-OpR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Compare Page View Cell" id="CU3-UG-OpR" customClass="ComparePageViewCell" customModule="Seapare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CU3-UG-OpR" id="zbj-py-nd0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -255,10 +255,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Compare" image="Compare Icon" id="sBg-rZ-egz"/>
+                    <connections>
+                        <outlet property="table" destination="0c1-Ud-GdN" id="AWh-qE-soe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJj-Oi-2fP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="690"/>
+            <point key="canvasLocation" x="-252" y="673.31334332833592"/>
         </scene>
         <!--Help Page View Controller-->
         <scene sceneID="dMs-U2-0Ba">

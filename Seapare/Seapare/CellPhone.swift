@@ -8,7 +8,34 @@
 
 import Foundation
 
-class CellPhone : Device{
+protocol Reflectable {
+    func properties()->[String]
+}
+
+extension Reflectable
+{
+    func properties()->[String]{
+        var s = [String]()
+        for c in Mirror(reflecting: self).children
+        {
+            if let name = c.label{
+                s.append(name)
+            }
+        }
+        return s
+    }
+    
+    func values()->[Any]{
+        var a = [Any]()
+        for c in Mirror(reflecting: self).children{
+            a.append(c.value)
+            
+        }
+        return a
+    }
+}
+
+class CellPhone : Device, Reflectable{
     var phone_id : Int!
     var cellphone_name : String!
     var colour : String!

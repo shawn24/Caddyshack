@@ -52,6 +52,7 @@ class ResultTableViewCell: UITableViewCell {
             } else {
                 let lastCell = cellCollection[i-1]
                 cell.frame = CGRect(x: lastCell.frame.origin.x + lastCell.frame.width, y: 0, width: 100, height: 50)
+                
             }
             
             if cell is UILabel {
@@ -61,10 +62,13 @@ class ResultTableViewCell: UITableViewCell {
                 //let c = cell as! UIButton
             }
             
+            cell.layer.borderWidth = 1
+            
             self.addSubview(cell)
             
             i = i + 1
         }
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

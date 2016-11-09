@@ -10,9 +10,6 @@ import UIKit
 import GRDB
 
 class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
-    
-    
-
 
     // MARK: Properties
     @IBOutlet weak var keywordTextField: UITextField!
@@ -179,16 +176,11 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBAction func search(_ sender: AnyObject) {
         
         let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
-        /*
-            for (index, element) in phones.getPhones().enumerated() {
-                let name:String = (element as CellPhone).cellphone_name
-                print("Item \(index): \(name)")
-            }
- */
             
         if let t = self.tabBarController as? TabBarController {
             t.cellPhoneSearchResultList = phones
             t.selectedIndex = 1
+            
         } else {
             print("tabBarController is nil")
         }

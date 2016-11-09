@@ -12,31 +12,13 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
-
-    var cellPhoneSearchResultList:CellPhoneSearchResultsList!
+    
+    var tabBar:TabBarController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // get phone list from its tabBarController
-        if let t = self.tabBarController as? TabBarController {
-            if let phones = t.cellPhoneSearchResultList {
-                self.cellPhoneSearchResultList = phones
-            } else {
-                print("t.cellPhoneSearchResultList is nil")
-            }
-        } else {
-            print("tabBarController is nil")
-        }
-        /*
-        let sframe = scrollView.frame
-        scrollView.transform = CGAffineTransform.init(rotationAngle: CGFloat(-M_PI_2))
-        scrollView.frame = sframe
-        let tframe = table.frame
-        table.transform = CGAffineTransform.init(rotationAngle: CGFloat(M_PI_2))
-        table.frame = tframe
- */
-        //table.frame.size = table.contentSize
+        tabBar = self.tabBarController as! TabBarController
         
         table.dataSource = self
         
@@ -47,6 +29,9 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        table.reloadData()
+    }
     
     // MARK: Table configurations
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,10 +41,16 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return cellPhoneSearchResultList.phones.count + 2
+        if tabBar.cellPhoneSearchResultList == nil {
+            return 0
+        }
+        
+        return tabBar.cellPhoneSearchResultList!.phones.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result Table View Cell", for: indexPath as IndexPath) as! ResultTableViewCell
         if indexPath.row == 0 {
             cell.nameCell.text = "name"
@@ -71,9 +62,8 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.compareCell.setTitle("compare", for: .normal)
             
         } else if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
-        
         } else {
-            let phone = cellPhoneSearchResultList.phones[indexPath.row-1]
+            let phone = tabBar.cellPhoneSearchResultList!.phones[indexPath.row-1]
             cell.nameCell.text = phone.cellphone_name
             cell.brandCell.text = phone.brand_obj.brand_name
             cell.priceCell.text = "\(phone.price!)"
@@ -81,15 +71,38 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.capacityCell.text = "\(phone.capacity!)"
             cell.ramCell.text = "\(phone.ram!)"
             cell.compareCell.setTitle("+", for: .normal)
+            cell.compareCell.addTarget(self, action: #selector(self.addToCompareList(sender:)), for: .touchUpInside)
+            
         }
         
         
-        print(tableView.contentSize)
+        //print(tableView.contentSize)
         tableView.contentSize = CGSize(width: cell.compareCell.frame.width + cell.compareCell.frame.origin.x,height:tableView.contentSize.height)
         tableView.frame.size = tableView.contentSize
         scrollView.contentSize = tableView.frame.size
         
         return cell
+    }
+    
+    // Mark: Selector
+    func addToCompareList(sender:UIButton!){
+        if let cell = sender.superview as? ResultTableViewCell {
+            let index = (table.indexPath(for: cell)?.row)! - 1
+            if let t = self.tabBarController as? TabBarController {
+                if t.phone1 == nil {
+                    t.phone1 = t.cellPhoneSearchResultList?.phones[index]
+                } else if t.phone2 == nil {
+                    t.phone2 = t.cellPhoneSearchResultList?.phones[index]
+                } else {
+                    print("Your compareList is full!")
+                }
+            } else {
+                print("tabBarController is nil")
+            }
+
+        } else {
+            print("Cannot find the cell")
+        }
     }
 
 }
