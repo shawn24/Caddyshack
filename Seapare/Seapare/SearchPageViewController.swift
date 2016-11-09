@@ -7,11 +7,9 @@
 //
 
 import UIKit
+import GRDB
 
 class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
-    
-    
-
 
     // MARK: Properties
     @IBOutlet weak var keywordTextField: UITextField!
@@ -20,6 +18,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var priceTextPicker: UITextField!
     @IBOutlet weak var cameraTextPicker: UITextField!
     @IBOutlet weak var ramTextPicker: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
     
     var brandOption = ["","Apple", "Sumsung", "Microsoft", "onePlus"]
@@ -43,12 +42,27 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         
         // Change the text fields' input view to picker view
         let pickerView = UIPickerView()
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
         pickerView.delegate = self
+        let space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SearchPageViewController.endEditing))
+        toolBar.setItems([space,doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+        
         brandTextPicker.inputView = pickerView
+        brandTextPicker.inputAccessoryView = toolBar
         capacityTextPicker.inputView = pickerView
+        capacityTextPicker.inputAccessoryView = toolBar
         priceTextPicker.inputView = pickerView
+        priceTextPicker.inputAccessoryView = toolBar
         cameraTextPicker.inputView = pickerView
+        cameraTextPicker.inputAccessoryView = toolBar
         ramTextPicker.inputView = pickerView
+        ramTextPicker.inputAccessoryView = toolBar
+        
+        searchButton.layer.cornerRadius = 5
         
     }
 
@@ -76,6 +90,10 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         
         return nil
         
+    }
+    
+    func endEditing(){
+        view.endEditing(true)
     }
     
     // MARK: UITextFieldDelegate
@@ -108,6 +126,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         let picker = textField.inputView
         if picker is UIPickerView {
             (picker as! UIPickerView).reloadAllComponents()
+            (picker as! UIPickerView).selectRow(0, inComponent: 0, animated: true)
         }
     }
     
@@ -155,8 +174,102 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     // MARK: Actions
     @IBAction func search(_ sender: AnyObject) {
-        print("Search!")
+        
+        let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
+            
+        if let t = self.tabBarController as? TabBarController {
+            t.cellPhoneSearchResultList = phones
+            t.selectedIndex = 1
+            
+        } else {
+            print("tabBarController is nil")
+        }
     }
     
+    func getCellPhones(keyword: String?, brand: String?, capacity: String?, price: String?, camera: String?, ram: String?) -> CellPhoneSearchResultsList{
+        
+        var keywordString = ""
+        var brandString = ""
+        var capacityString = ""
+        var priceString = ""
+        var cameraString = ""
+        var ramString = ""
+        var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id"
+        if (keyword != nil) { keywordString = ("name like \"%" + keyword! + "%\"")}
+        if (brand != nil) { brandString = "brand_name = \"" + brand! + "\""}
+        if (capacity != nil) { capacityString = "capacity = " + capacity! }
+        if (price != nil) { priceString = "price_cdn = " + price!}
+        if (camera != nil) { cameraString = "camera_mp = " + camera!}
+        if (ram != nil) { ramString = "ram_mb = " + ram!}
+        
+        var criteria_list = [keywordString, brandString, capacityString, priceString, cameraString, ramString].filter{(str) in str != ""}
+        if !criteria_list.isEmpty {
+            if criteria_list.count == 1 {
+                queryString += " where " + criteria_list[0]
+            }
+            else {
+                let criteriaString = criteria_list.joined(separator: " and ")
+                queryString += " where " + criteriaString
+            }
+        }
+        
+        do{
+            let phones = try self.makeQuery(query: queryString)
+            /*
+            for (index, element) in phones.getPhones().enumerated() {
+                let name:String = (element as CellPhone).cellphone_name
+                print("Item \(index): \(name)")
+            }
+ */
+            return phones
+        }
+        catch let error as NSError {
+            print("Could not get phones by keyword: \(error)")
+        }
+        return CellPhoneSearchResultsList()
+    }
+
+    func makeQuery(query: String) throws -> CellPhoneSearchResultsList{
+        let phoneList = CellPhoneSearchResultsList()
+        dbQueue.inDatabase { db in
+            for row in Row.fetch(db, query) {
+                let phone = CellPhone()
+                phone.device_id = row.value(named: "device_id")
+                phone.device_type_id = row.value(named: "device_id")
+                phone.device_type_name = row.value(named: "device_type_name")
+                let brand = Brand()
+                brand.brand_id = row.value(named: "brand_id")
+                brand.brand_name = row.value(named: "brand_name")
+                phone.brand_obj = brand
+                
+                phone.cellphone_name = row.value(named: "name")
+                phone.phone_id = row.value(named: "phone_id")
+                phone.colour = row.value(named: "color")
+                phone.price = row.value(named: "price_cdn")
+                phone.network = row.value(named: "network")
+                phone.screen_size = row.value(named: "screen_size_inch")
+                phone.ppi = row.value(named: "ppi")
+                phone.resolution = row.value(named: "resolution")
+                phone.ram = row.value(named: "ram_mb")
+                phone.capacity = row.value(named: "capacity")
+                phone.device_size = row.value(named: "device_size_mm")
+                phone.camera_resolution = row.value(named: "camera_mp")
+                phone.platform = row.value(named: "platform")
+                phone.gps_flag = row.value(named: "gps")
+                phone.bluetooth_flag = row.value(named: "bluetooth")
+                phone.nfc_flag = row.value(named: "nfc")
+                phone.memory_card_support_flag = row.value(named: "memory_card")
+                phone.fingerprint_flag = row.value(named: "fingerprint")
+                phone.warranty = row.value(named: "warranty_m")
+                phone.processor = row.value(named: "processor")
+                phone.standby_hour = row.value(named: "standby_h")
+                phone.talktime_hour = row.value(named: "talktime_h")
+                phone.weight = row.value(named: "weight_g")
+                phoneList.append(phone: phone)
+            }
+        }
+        
+        return phoneList
+    }
 }
 

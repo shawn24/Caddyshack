@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/wuyulun/Developer/Caddyshack/Seapare/build/Debug-iphoneos/GRDB.swift/GRDB.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/wuyulun/Developer/Caddyshack/Seapare/build/Pods.build/Debug-iphoneos/GRDB.swift.build/unextended-module.modulemap',
+    }]
+  }]
+}

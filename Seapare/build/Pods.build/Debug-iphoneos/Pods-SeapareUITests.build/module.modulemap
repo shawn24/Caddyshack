@@ -1,0 +1,6 @@
+framework module Pods_SeapareUITests {
+  umbrella header "Pods-SeapareUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

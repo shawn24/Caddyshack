@@ -1,0 +1,1059 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07CD76073B43EE81D6606D8B66634C50 /* NSString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB142E20748D86A5A1A6106471A37258 /* NSString.swift */; };
+		07F65E6FF9FC0280883DA72857F06D71 /* SQLCollatedExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DA548920616D783EB6579AE374451 /* SQLCollatedExpression.swift */; };
+		084E61E3FA11227A63E5EB84BB90EC2C /* TableDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0670B6CD7D6B2884205B0AB14A9711 /* TableDefinition.swift */; };
+		0F221E203CD254CF189CE4F6642C8340 /* DatabasePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276BC30DFCCD4BFAA77BC33FC56173DD /* DatabasePool.swift */; };
+		0FFDC38E5526E6B48A66DAC6EE2E6124 /* QueryInterfaceSelectQueryDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514D5455ADDAD3FAF2A97F1EA85D6ECF /* QueryInterfaceSelectQueryDefinition.swift */; };
+		15FC98D6CAF3BB1567BF178F536A059B /* DatabaseMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E65A01D421DEE9B839738C052208C6E /* DatabaseMigrator.swift */; };
+		174DF78812655C30847AFBFB4FA563A1 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B689B4BD8F19741614BFAE32EF31F9 /* DatabaseError.swift */; };
+		1DC49A52F16AAA263B98BF3DBE0093CB /* DatabaseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5103DEE1E7FD6BDB750973E98C3ED4EF /* DatabaseWriter.swift */; };
+		1DC8C6A20B56F1693578240AE13AEAE1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9721230465977CEAD87D84BCAE6EF5FF /* Data.swift */; };
+		20D425F209D52B4B2CAAD4658920D1A0 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C35FA6EA00D2A524CCF39F85454821 /* CGFloat.swift */; };
+		26376BB644108FFB9FD3C8AD28929C2D /* GRDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A4BDF5BC461FF566C93C490DCA5FBD /* GRDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		290762035780B169D0971604A84B452A /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710154CBBE4FD4DE6C013D22E784EB8E /* Persistable.swift */; };
+		327BAA16B55BFA413C38FAD65303CAEE /* Pods-Seapare-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF66D28CFFE270F60203CE8598D0B6B /* Pods-Seapare-dummy.m */; };
+		36702DB90AF6077B43B4BC56C17277C6 /* SQLSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E329F80E9F01729E9C2D5BD08CC6F0F /* SQLSelectable.swift */; };
+		39BE98753E8F51A1C072F3DA544F9DE5 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F111CF2850B3DE73CF2C06E400EABD /* URL.swift */; };
+		3F2596FC681A376847880A17B9CC0D09 /* DatabaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4143EDAD73A0D3322F8314F592DFDB /* DatabaseReader.swift */; };
+		3FCCEB2579A1DDDF9399A6E3F9B89C0C /* Pods-SeapareTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C72575B09D3E2AEE20F94B2BB331238B /* Pods-SeapareTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42B7F66766D04E25B7A2463A4E4943C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		43FF143562992FB2168014B191D24D10 /* NSNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98574858E06947AC71B57595769C23F8 /* NSNull.swift */; };
+		47E7A55073E1709EB647DFCED7BDE0D9 /* DatabaseValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BFAB5256C9E81E7D81468DF7EBC777 /* DatabaseValueConvertible.swift */; };
+		4C3CCDBD3720596E88EC3D8D645E5A17 /* SQLSelectQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F49DC22485DDD3BCBFB2F8B94D73761 /* SQLSelectQuery.swift */; };
+		4E6198B0C5DDE53D98E588BB34F73AA1 /* SQLFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FC6E2F58168148E180F86E052CB2B4 /* SQLFunctions.swift */; };
+		530506AA6DFF885AF4BB5BE628DF2DE6 /* TableMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05F4A6B02CBA4780B0FD95666171488 /* TableMapping.swift */; };
+		55CC94D197C6D675F42668DD487F1140 /* DatabaseCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20E75BB4CA6C3DFB84DFB7567BAF03 /* DatabaseCoder.swift */; };
+		55F71E1D0B85FBFCE7A4B5DA34A0552F /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CBB6A1B2F7F26125F444C7C5E86BF2 /* Migration.swift */; };
+		56C1DA996137F6DDAFF3FE908DEA5C41 /* Pods-SeapareTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0DFEE3D6DAF7966134491BB7E58BEE /* Pods-SeapareTests-dummy.m */; };
+		59C0045C70D450200C5F0CCDBEA1FF31 /* GRDB-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B34F65A0318E607A227805293F05A20 /* GRDB-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D41C505282FEF51A9BED0936A79C424 /* NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF44515CFFF21A712918AF7F2C8E0C1 /* NSURL.swift */; };
+		5E325E0F5400ACE9FF384502A34B0D8D /* FetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7463AAEC9CF2FD96DBD2088B03E547F6 /* FetchRequest.swift */; };
+		6054162E02A28EC5D1BE9D3F4F56E0C6 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14697E42CDF211C0BF9FC994C6035403 /* Statement.swift */; };
+		61FEA3123FEFC8E4759308C5636E07AE /* SQLSpecificExpressible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9E9A0A8FACFDF4FAFFEF72115DEBD0 /* SQLSpecificExpressible.swift */; };
+		64306664452A2A00074A256A87033462 /* RowConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB134741CD66A54233B566FB569CA35 /* RowConvertible.swift */; };
+		68E5E3C5ED915CF445CB0E82BD596561 /* NSNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4978DD2E637A2EF861B37B7A2055B04 /* NSNumber.swift */; };
+		69A7F13FC5660C102883F4821A49DFA8 /* NSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226FF2678F5B654170B5FF8CEE9FF648 /* NSData.swift */; };
+		69FFD4C13A3B3CDC763F62C3A80787E4 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E20870FFF9F025B8A5D0073F7B4B897 /* Row.swift */; };
+		6B696558A6D771B8A65D68627EF91299 /* SQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879CEDE52E6CFEC2B2C1674C20CE47A6 /* SQLExpression.swift */; };
+		6CE36ED237ACC01AAFB6141C4934CFA6 /* FetchedRecordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49440F17199BF3745F9FAB474BFDD0C6 /* FetchedRecordsController.swift */; };
+		7424BB285577F2FB31274078FC133E55 /* SQLCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A21CDBDCBED592EC368ABD8A4289A9 /* SQLCollection.swift */; };
+		770591E90FCB0DD37DF212E7C1C207D8 /* DatabaseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A17B52F3127EB404990ECD16F640D1 /* DatabaseQueue.swift */; };
+		7D8B872877A24E51FF2E6A346F909FA5 /* SerializedDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D40258A85FFE536A6B20529867B6BA /* SerializedDatabase.swift */; };
+		80A83A5B259DC1FCF6B635D6A9F89851 /* GRDB.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 793304DAB0C9E1C87439F7024013FDF7 /* GRDB.swift-dummy.m */; };
+		8282E1276FA8B91EFF60DE1A982574E6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079EAE465574230E0DBA3552EB20D5F2 /* Database.swift */; };
+		84A6D9E160C497653BCB34A6FD971D41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		8B3D8A6007993292F1950F8413D0E0AE /* Pods-Seapare-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A556E2E9D4DCB19233C49657A4941813 /* Pods-Seapare-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E4CF5AED0353405C6C00AAAFC0A12DD /* Pods-SeapareUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D746F1B3614D3AD9311BE1075123B668 /* Pods-SeapareUITests-dummy.m */; };
+		8FA455B36BC181A409C103D53D241965 /* SchedulingWatchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649793FC84ED2822E4EE80AB8DC2DFA6 /* SchedulingWatchdog.swift */; };
+		9D5B73DC377507226653F9A4CE04078E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC60167EF092D37E20D7728FCA6239D /* Configuration.swift */; };
+		9FA7EAD19941A39EBCEE126990FF693C /* RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A6992ECDCFE362C229C5C6AC36FF53 /* RawRepresentable.swift */; };
+		A0771B28D1131080CD7B611126E3E246 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		A893A28300F1E68D0485A652B7CF454A /* RowAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8F8C19993D1D69FDC9FEA4684EDBC /* RowAdapter.swift */; };
+		B20DE7ABF67FA7585F4DBB85B4ABB5B4 /* DatabaseValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A08E7CD3A005C29B58122167936CEC /* DatabaseValue.swift */; };
+		BAC25794FE87FE36DDED2093B5984B04 /* DatabaseDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3FB45A20077F9C680AE4D50130302A /* DatabaseDateComponents.swift */; };
+		BD40551B886B6F5195B6E0F904EEBC34 /* DatabaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA1A720ED745F7991F056028DDC729C /* DatabaseStore.swift */; };
+		C255964087D44D00DC6F06E5161F81F1 /* StatementColumnConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2A4915BEBD736BEB31FFAA9F995D6 /* StatementColumnConvertible.swift */; };
+		C7708F77A3F1508E353D648A36279D05 /* SQLOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448ADDA621B28F3271B0A8D4BFABB3E /* SQLOperators.swift */; };
+		C8FCF63D6A072A698B17087BD646946F /* NSUUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA26D589C9F1C5DA2E3F95D9A081C83 /* NSUUID.swift */; };
+		CB19B28FF9B62F77AB085B9095B37DC4 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311EE7DECC022A860B36A9A2261AF59E /* Record.swift */; };
+		CB200419ECDE1B51200C4F9749E32429 /* SQLOrderingTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F04ACD14E5C6C6C9E428584A1248D /* SQLOrderingTerm.swift */; };
+		D10B4E6CBBBA76BDE497CF6A9D01C2C8 /* QueryInterfaceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFEFE892A3C1B48DFD1FA6744F561D9 /* QueryInterfaceRequest.swift */; };
+		D1CA4179E97DCF5C3645A56310FFADFA /* StandardLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B713C504C62390B985AE25A276139 /* StandardLibrary.swift */; };
+		D6716770C3D5E665189CACA53581C7FE /* Pods-SeapareUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A585060D6623C2D83985F73A1F81D33 /* Pods-SeapareUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D89B59F741031C5901AA5AF67CA5BEE2 /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56184340DF256FDA8B455BC68A4A6EAD /* UUID.swift */; };
+		D9B5A49555E42886401FFF53654AA578 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4B51EE2CF9489F55F039A42B6E852A /* Date.swift */; };
+		E22A5B1CA3AF4EAE34172BC4FA6F2BB4 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51318230E6DD4F771A58D87D3BE2337 /* NSDate.swift */; };
+		E420A298417B5ED2CE7C9C339173D4EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		FA592CF674782B7132AE25094A8833B9 /* DatabaseSchemaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529AECB401419826819AE84C91E6099A /* DatabaseSchemaCache.swift */; };
+		FF0466B0E1AB29F08CC38BC4BFDBBF8A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F9EFF4EBECFC686C83CDFF8C862F5E /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A036FC562C53105D7005D33027759BCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB28D8B29E569349752BCCEAF15057F;
+			remoteInfo = GRDB.swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0089BF2BF472A404D1C9F7A030944751 /* Pods_SeapareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeapareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		017DA548920616D783EB6579AE374451 /* SQLCollatedExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLCollatedExpression.swift; path = GRDB/QueryInterface/SQLCollatedExpression.swift; sourceTree = "<group>"; };
+		079EAE465574230E0DBA3552EB20D5F2 /* Database.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Database.swift; path = GRDB/Core/Database.swift; sourceTree = "<group>"; };
+		0A20E75BB4CA6C3DFB84DFB7567BAF03 /* DatabaseCoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseCoder.swift; path = GRDB/Core/Support/Foundation/DatabaseCoder.swift; sourceTree = "<group>"; };
+		0E9E9A0A8FACFDF4FAFFEF72115DEBD0 /* SQLSpecificExpressible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSpecificExpressible.swift; path = GRDB/QueryInterface/SQLSpecificExpressible.swift; sourceTree = "<group>"; };
+		13989CE4F9113B9298E260F80D4202AD /* Pods-SeapareTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SeapareTests.modulemap"; sourceTree = "<group>"; };
+		14697E42CDF211C0BF9FC994C6035403 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = GRDB/Core/Statement.swift; sourceTree = "<group>"; };
+		149BDF0BAD1E32433FEFE09144F69E1E /* Pods-Seapare-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Seapare-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1E4143EDAD73A0D3322F8314F592DFDB /* DatabaseReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseReader.swift; path = GRDB/Core/DatabaseReader.swift; sourceTree = "<group>"; };
+		1F49DC22485DDD3BCBFB2F8B94D73761 /* SQLSelectQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSelectQuery.swift; path = GRDB/QueryInterface/SQLSelectQuery.swift; sourceTree = "<group>"; };
+		21E429B34E994F2914A391E11116B6D7 /* GRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		226FF2678F5B654170B5FF8CEE9FF648 /* NSData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSData.swift; path = GRDB/Core/Support/Foundation/NSData.swift; sourceTree = "<group>"; };
+		276BC30DFCCD4BFAA77BC33FC56173DD /* DatabasePool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabasePool.swift; path = GRDB/Core/DatabasePool.swift; sourceTree = "<group>"; };
+		2B34F65A0318E607A227805293F05A20 /* GRDB-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GRDB-Bridging.h"; path = "GRDB/GRDB-Bridging.h"; sourceTree = "<group>"; };
+		2C6772E90C5CD9954BA791BA9EF4BE19 /* Pods-SeapareTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SeapareTests-frameworks.sh"; sourceTree = "<group>"; };
+		2E20870FFF9F025B8A5D0073F7B4B897 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = GRDB/Core/Row.swift; sourceTree = "<group>"; };
+		311EE7DECC022A860B36A9A2261AF59E /* Record.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Record.swift; path = GRDB/Record/Record.swift; sourceTree = "<group>"; };
+		32F9D490DFF919F1A787ACFD7CD4B820 /* Pods-SeapareUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SeapareUITests-frameworks.sh"; sourceTree = "<group>"; };
+		35C420AA282961B547FF03E846F6181D /* GRDB.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GRDB.swift-prefix.pch"; sourceTree = "<group>"; };
+		3A0308A81CCD214553F46D2B55162426 /* Pods-SeapareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeapareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A7709A3CDB2C95D27A99C4AE550CE39 /* Pods-SeapareTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SeapareTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3AC3EBB3396080B932E32416567BB266 /* Pods-Seapare-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Seapare-resources.sh"; sourceTree = "<group>"; };
+		3E0B713C504C62390B985AE25A276139 /* StandardLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StandardLibrary.swift; path = GRDB/Core/Support/StandardLibrary/StandardLibrary.swift; sourceTree = "<group>"; };
+		3E6F82EBF5AC8B90CC96D412E67C99A2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E939972EE61FD57AF9B081AE743AD01 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EF44515CFFF21A712918AF7F2C8E0C1 /* NSURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSURL.swift; path = GRDB/Core/Support/Foundation/NSURL.swift; sourceTree = "<group>"; };
+		479FBFF970FE88D02C13915F489A46CC /* Pods_Seapare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seapare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49440F17199BF3745F9FAB474BFDD0C6 /* FetchedRecordsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FetchedRecordsController.swift; path = GRDB/Record/FetchedRecordsController.swift; sourceTree = "<group>"; };
+		4A585060D6623C2D83985F73A1F81D33 /* Pods-SeapareUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SeapareUITests-umbrella.h"; sourceTree = "<group>"; };
+		4E329F80E9F01729E9C2D5BD08CC6F0F /* SQLSelectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLSelectable.swift; path = GRDB/QueryInterface/SQLSelectable.swift; sourceTree = "<group>"; };
+		50D29167BE564521C480EE5D9877DF5E /* Pods-SeapareUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SeapareUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5103DEE1E7FD6BDB750973E98C3ED4EF /* DatabaseWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseWriter.swift; path = GRDB/Core/DatabaseWriter.swift; sourceTree = "<group>"; };
+		514D5455ADDAD3FAF2A97F1EA85D6ECF /* QueryInterfaceSelectQueryDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryInterfaceSelectQueryDefinition.swift; path = GRDB/QueryInterface/QueryInterfaceSelectQueryDefinition.swift; sourceTree = "<group>"; };
+		529AECB401419826819AE84C91E6099A /* DatabaseSchemaCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseSchemaCache.swift; path = GRDB/Core/DatabaseSchemaCache.swift; sourceTree = "<group>"; };
+		56184340DF256FDA8B455BC68A4A6EAD /* UUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUID.swift; path = GRDB/Core/Support/Foundation/UUID.swift; sourceTree = "<group>"; };
+		582408D62F2A2309A148E1BD0399D385 /* Pods-SeapareUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SeapareUITests.modulemap"; sourceTree = "<group>"; };
+		58E7735F3ABC8C202B83273F73007626 /* Pods-Seapare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seapare.debug.xcconfig"; sourceTree = "<group>"; };
+		5A7A284CC89CAB06FF0DF10B089DA2E2 /* Pods-SeapareUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SeapareUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5CA26D589C9F1C5DA2E3F95D9A081C83 /* NSUUID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSUUID.swift; path = GRDB/Core/Support/Foundation/NSUUID.swift; sourceTree = "<group>"; };
+		5DF2A4915BEBD736BEB31FFAA9F995D6 /* StatementColumnConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatementColumnConvertible.swift; path = GRDB/Core/StatementColumnConvertible.swift; sourceTree = "<group>"; };
+		61A21CDBDCBED592EC368ABD8A4289A9 /* SQLCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLCollection.swift; path = GRDB/QueryInterface/SQLCollection.swift; sourceTree = "<group>"; };
+		649793FC84ED2822E4EE80AB8DC2DFA6 /* SchedulingWatchdog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SchedulingWatchdog.swift; path = GRDB/Core/SchedulingWatchdog.swift; sourceTree = "<group>"; };
+		6B935A8D89BA86BBE2181342B51864EA /* Pods-SeapareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeapareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6CFEFE892A3C1B48DFD1FA6744F561D9 /* QueryInterfaceRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryInterfaceRequest.swift; path = GRDB/QueryInterface/QueryInterfaceRequest.swift; sourceTree = "<group>"; };
+		6D13A39D8644AD432FCC5D00AF18B57D /* Pods-Seapare.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Seapare.modulemap"; sourceTree = "<group>"; };
+		6EF66D28CFFE270F60203CE8598D0B6B /* Pods-Seapare-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Seapare-dummy.m"; sourceTree = "<group>"; };
+		70BFAB5256C9E81E7D81468DF7EBC777 /* DatabaseValueConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseValueConvertible.swift; path = GRDB/Core/DatabaseValueConvertible.swift; sourceTree = "<group>"; };
+		710154CBBE4FD4DE6C013D22E784EB8E /* Persistable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = GRDB/Record/Persistable.swift; sourceTree = "<group>"; };
+		71D40258A85FFE536A6B20529867B6BA /* SerializedDatabase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerializedDatabase.swift; path = GRDB/Core/SerializedDatabase.swift; sourceTree = "<group>"; };
+		74584B23D50821F4C25E603C3960A9E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7463AAEC9CF2FD96DBD2088B03E547F6 /* FetchRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FetchRequest.swift; path = GRDB/Core/FetchRequest.swift; sourceTree = "<group>"; };
+		793304DAB0C9E1C87439F7024013FDF7 /* GRDB.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GRDB.swift-dummy.m"; sourceTree = "<group>"; };
+		7AAF7CEFA2BC2372E3DF771100DC753F /* GRDB.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GRDB.swift.modulemap; sourceTree = "<group>"; };
+		7C5A7CAB64DA6FD3F041F5E52390CF80 /* Pods_SeapareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeapareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E65A01D421DEE9B839738C052208C6E /* DatabaseMigrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseMigrator.swift; path = GRDB/Migrations/DatabaseMigrator.swift; sourceTree = "<group>"; };
+		83707688F5FCED7DC0F876A76078DBDB /* Pods-SeapareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeapareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		879CEDE52E6CFEC2B2C1674C20CE47A6 /* SQLExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLExpression.swift; path = GRDB/QueryInterface/SQLExpression.swift; sourceTree = "<group>"; };
+		88A6E05EA47CEC437BF016BA74412FD9 /* Pods-SeapareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SeapareTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F0670B6CD7D6B2884205B0AB14A9711 /* TableDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableDefinition.swift; path = GRDB/QueryInterface/TableDefinition.swift; sourceTree = "<group>"; };
+		8FA1A720ED745F7991F056028DDC729C /* DatabaseStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseStore.swift; path = GRDB/Core/DatabaseStore.swift; sourceTree = "<group>"; };
+		91A4BDF5BC461FF566C93C490DCA5FBD /* GRDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GRDB.h; path = GRDB/GRDB.h; sourceTree = "<group>"; };
+		928B5A3585AB8D98BF4374149D421CFB /* Pods-Seapare-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seapare-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94F9EFF4EBECFC686C83CDFF8C862F5E /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = GRDB/Core/Utils.swift; sourceTree = "<group>"; };
+		95A08E7CD3A005C29B58122167936CEC /* DatabaseValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseValue.swift; path = GRDB/Core/DatabaseValue.swift; sourceTree = "<group>"; };
+		9721230465977CEAD87D84BCAE6EF5FF /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = GRDB/Core/Support/Foundation/Data.swift; sourceTree = "<group>"; };
+		98574858E06947AC71B57595769C23F8 /* NSNull.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSNull.swift; path = GRDB/Core/Support/Foundation/NSNull.swift; sourceTree = "<group>"; };
+		A556E2E9D4DCB19233C49657A4941813 /* Pods-Seapare-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Seapare-umbrella.h"; sourceTree = "<group>"; };
+		A6FC6E2F58168148E180F86E052CB2B4 /* SQLFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLFunctions.swift; path = GRDB/QueryInterface/Support/SQLFunctions.swift; sourceTree = "<group>"; };
+		ACC60167EF092D37E20D7728FCA6239D /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = GRDB/Core/Configuration.swift; sourceTree = "<group>"; };
+		B2BE873558F49A990D0FD1108BBFF385 /* Pods-SeapareTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SeapareTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B4587B6214846ECE7701E8197D7499CF /* Pods-SeapareUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SeapareUITests-resources.sh"; sourceTree = "<group>"; };
+		B4A17B52F3127EB404990ECD16F640D1 /* DatabaseQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseQueue.swift; path = GRDB/Core/DatabaseQueue.swift; sourceTree = "<group>"; };
+		B51318230E6DD4F771A58D87D3BE2337 /* NSDate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDate.swift; path = GRDB/Core/Support/Foundation/NSDate.swift; sourceTree = "<group>"; };
+		BBF8F8C19993D1D69FDC9FEA4684EDBC /* RowAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowAdapter.swift; path = GRDB/Core/RowAdapter.swift; sourceTree = "<group>"; };
+		C19F04ACD14E5C6C6C9E428584A1248D /* SQLOrderingTerm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLOrderingTerm.swift; path = GRDB/QueryInterface/SQLOrderingTerm.swift; sourceTree = "<group>"; };
+		C6B011F032860F46982A257F7A9AF2D5 /* GRDB.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GRDB.swift.xcconfig; sourceTree = "<group>"; };
+		C72575B09D3E2AEE20F94B2BB331238B /* Pods-SeapareTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SeapareTests-umbrella.h"; sourceTree = "<group>"; };
+		C9C35FA6EA00D2A524CCF39F85454821 /* CGFloat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloat.swift; path = GRDB/Core/Support/CoreGraphics/CGFloat.swift; sourceTree = "<group>"; };
+		CB142E20748D86A5A1A6106471A37258 /* NSString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSString.swift; path = GRDB/Core/Support/Foundation/NSString.swift; sourceTree = "<group>"; };
+		CC0DFEE3D6DAF7966134491BB7E58BEE /* Pods-SeapareTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SeapareTests-dummy.m"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D4978DD2E637A2EF861B37B7A2055B04 /* NSNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSNumber.swift; path = GRDB/Core/Support/Foundation/NSNumber.swift; sourceTree = "<group>"; };
+		D5CBB6A1B2F7F26125F444C7C5E86BF2 /* Migration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Migration.swift; path = GRDB/Migrations/Migration.swift; sourceTree = "<group>"; };
+		D746F1B3614D3AD9311BE1075123B668 /* Pods-SeapareUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SeapareUITests-dummy.m"; sourceTree = "<group>"; };
+		D8A6992ECDCFE362C229C5C6AC36FF53 /* RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawRepresentable.swift; path = GRDB/Core/Support/StandardLibrary/RawRepresentable.swift; sourceTree = "<group>"; };
+		D8B689B4BD8F19741614BFAE32EF31F9 /* DatabaseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseError.swift; path = GRDB/Core/DatabaseError.swift; sourceTree = "<group>"; };
+		DDF37BE477B885F8DA9F974D5E8AD5B2 /* Pods-Seapare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seapare.release.xcconfig"; sourceTree = "<group>"; };
+		E05F4A6B02CBA4780B0FD95666171488 /* TableMapping.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableMapping.swift; path = GRDB/Record/TableMapping.swift; sourceTree = "<group>"; };
+		E1F3986B05CDE7C77539A9FABBE741B5 /* Pods-Seapare-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Seapare-frameworks.sh"; sourceTree = "<group>"; };
+		E448ADDA621B28F3271B0A8D4BFABB3E /* SQLOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLOperators.swift; path = GRDB/QueryInterface/Support/SQLOperators.swift; sourceTree = "<group>"; };
+		E6E4839E5E3153B5C125C3BFB4F07A2A /* Pods-SeapareTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SeapareTests-resources.sh"; sourceTree = "<group>"; };
+		EB3FB45A20077F9C680AE4D50130302A /* DatabaseDateComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseDateComponents.swift; path = GRDB/Core/Support/Foundation/DatabaseDateComponents.swift; sourceTree = "<group>"; };
+		F7CF49587A2CE9254EC4DDE58FEFCFDE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7F111CF2850B3DE73CF2C06E400EABD /* URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URL.swift; path = GRDB/Core/Support/Foundation/URL.swift; sourceTree = "<group>"; };
+		FAB134741CD66A54233B566FB569CA35 /* RowConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowConvertible.swift; path = GRDB/Record/RowConvertible.swift; sourceTree = "<group>"; };
+		FD4B51EE2CF9489F55F039A42B6E852A /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = GRDB/Core/Support/Foundation/Date.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		665B64D11217F4688F8421CD48A022B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A6D9E160C497653BCB34A6FD971D41 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705D0F3CA8F093774CFE5E1EFB2D17D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0771B28D1131080CD7B611126E3E246 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6BA161AA48884CB66A41404C499C989 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B7F66766D04E25B7A2463A4E4943C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED3DD70300EBBFC504D2B2852F097FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E420A298417B5ED2CE7C9C339173D4EF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		234D8B3171C61C88988DBE8864CDB123 /* Pods-Seapare */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF49587A2CE9254EC4DDE58FEFCFDE /* Info.plist */,
+				6D13A39D8644AD432FCC5D00AF18B57D /* Pods-Seapare.modulemap */,
+				149BDF0BAD1E32433FEFE09144F69E1E /* Pods-Seapare-acknowledgements.markdown */,
+				928B5A3585AB8D98BF4374149D421CFB /* Pods-Seapare-acknowledgements.plist */,
+				6EF66D28CFFE270F60203CE8598D0B6B /* Pods-Seapare-dummy.m */,
+				E1F3986B05CDE7C77539A9FABBE741B5 /* Pods-Seapare-frameworks.sh */,
+				3AC3EBB3396080B932E32416567BB266 /* Pods-Seapare-resources.sh */,
+				A556E2E9D4DCB19233C49657A4941813 /* Pods-Seapare-umbrella.h */,
+				58E7735F3ABC8C202B83273F73007626 /* Pods-Seapare.debug.xcconfig */,
+				DDF37BE477B885F8DA9F974D5E8AD5B2 /* Pods-Seapare.release.xcconfig */,
+			);
+			name = "Pods-Seapare";
+			path = "Target Support Files/Pods-Seapare";
+			sourceTree = "<group>";
+		};
+		2EB36432BAEFCA96C00F1E5237BABD65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AAF7CEFA2BC2372E3DF771100DC753F /* GRDB.swift.modulemap */,
+				C6B011F032860F46982A257F7A9AF2D5 /* GRDB.swift.xcconfig */,
+				793304DAB0C9E1C87439F7024013FDF7 /* GRDB.swift-dummy.m */,
+				35C420AA282961B547FF03E846F6181D /* GRDB.swift-prefix.pch */,
+				74584B23D50821F4C25E603C3960A9E0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GRDB.swift";
+			sourceTree = "<group>";
+		};
+		31D548E69216E6DBEED9579F2E853F71 /* Pods-SeapareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E6F82EBF5AC8B90CC96D412E67C99A2 /* Info.plist */,
+				582408D62F2A2309A148E1BD0399D385 /* Pods-SeapareUITests.modulemap */,
+				5A7A284CC89CAB06FF0DF10B089DA2E2 /* Pods-SeapareUITests-acknowledgements.markdown */,
+				50D29167BE564521C480EE5D9877DF5E /* Pods-SeapareUITests-acknowledgements.plist */,
+				D746F1B3614D3AD9311BE1075123B668 /* Pods-SeapareUITests-dummy.m */,
+				32F9D490DFF919F1A787ACFD7CD4B820 /* Pods-SeapareUITests-frameworks.sh */,
+				B4587B6214846ECE7701E8197D7499CF /* Pods-SeapareUITests-resources.sh */,
+				4A585060D6623C2D83985F73A1F81D33 /* Pods-SeapareUITests-umbrella.h */,
+				3A0308A81CCD214553F46D2B55162426 /* Pods-SeapareUITests.debug.xcconfig */,
+				6B935A8D89BA86BBE2181342B51864EA /* Pods-SeapareUITests.release.xcconfig */,
+			);
+			name = "Pods-SeapareUITests";
+			path = "Target Support Files/Pods-SeapareUITests";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4F52A82CD79467C883BC0F1D719B6B06 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				234D8B3171C61C88988DBE8864CDB123 /* Pods-Seapare */,
+				545B76CE812FEB862EA88B63B206ED43 /* Pods-SeapareTests */,
+				31D548E69216E6DBEED9579F2E853F71 /* Pods-SeapareUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		545B76CE812FEB862EA88B63B206ED43 /* Pods-SeapareTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E939972EE61FD57AF9B081AE743AD01 /* Info.plist */,
+				13989CE4F9113B9298E260F80D4202AD /* Pods-SeapareTests.modulemap */,
+				3A7709A3CDB2C95D27A99C4AE550CE39 /* Pods-SeapareTests-acknowledgements.markdown */,
+				B2BE873558F49A990D0FD1108BBFF385 /* Pods-SeapareTests-acknowledgements.plist */,
+				CC0DFEE3D6DAF7966134491BB7E58BEE /* Pods-SeapareTests-dummy.m */,
+				2C6772E90C5CD9954BA791BA9EF4BE19 /* Pods-SeapareTests-frameworks.sh */,
+				E6E4839E5E3153B5C125C3BFB4F07A2A /* Pods-SeapareTests-resources.sh */,
+				C72575B09D3E2AEE20F94B2BB331238B /* Pods-SeapareTests-umbrella.h */,
+				83707688F5FCED7DC0F876A76078DBDB /* Pods-SeapareTests.debug.xcconfig */,
+				88A6E05EA47CEC437BF016BA74412FD9 /* Pods-SeapareTests.release.xcconfig */,
+			);
+			name = "Pods-SeapareTests";
+			path = "Target Support Files/Pods-SeapareTests";
+			sourceTree = "<group>";
+		};
+		6191AB61B054C040925350E1AFD4614D /* GRDB.swift */ = {
+			isa = PBXGroup;
+			children = (
+				C9C35FA6EA00D2A524CCF39F85454821 /* CGFloat.swift */,
+				ACC60167EF092D37E20D7728FCA6239D /* Configuration.swift */,
+				9721230465977CEAD87D84BCAE6EF5FF /* Data.swift */,
+				079EAE465574230E0DBA3552EB20D5F2 /* Database.swift */,
+				0A20E75BB4CA6C3DFB84DFB7567BAF03 /* DatabaseCoder.swift */,
+				EB3FB45A20077F9C680AE4D50130302A /* DatabaseDateComponents.swift */,
+				D8B689B4BD8F19741614BFAE32EF31F9 /* DatabaseError.swift */,
+				7E65A01D421DEE9B839738C052208C6E /* DatabaseMigrator.swift */,
+				276BC30DFCCD4BFAA77BC33FC56173DD /* DatabasePool.swift */,
+				B4A17B52F3127EB404990ECD16F640D1 /* DatabaseQueue.swift */,
+				1E4143EDAD73A0D3322F8314F592DFDB /* DatabaseReader.swift */,
+				529AECB401419826819AE84C91E6099A /* DatabaseSchemaCache.swift */,
+				8FA1A720ED745F7991F056028DDC729C /* DatabaseStore.swift */,
+				95A08E7CD3A005C29B58122167936CEC /* DatabaseValue.swift */,
+				70BFAB5256C9E81E7D81468DF7EBC777 /* DatabaseValueConvertible.swift */,
+				5103DEE1E7FD6BDB750973E98C3ED4EF /* DatabaseWriter.swift */,
+				FD4B51EE2CF9489F55F039A42B6E852A /* Date.swift */,
+				49440F17199BF3745F9FAB474BFDD0C6 /* FetchedRecordsController.swift */,
+				7463AAEC9CF2FD96DBD2088B03E547F6 /* FetchRequest.swift */,
+				91A4BDF5BC461FF566C93C490DCA5FBD /* GRDB.h */,
+				2B34F65A0318E607A227805293F05A20 /* GRDB-Bridging.h */,
+				D5CBB6A1B2F7F26125F444C7C5E86BF2 /* Migration.swift */,
+				226FF2678F5B654170B5FF8CEE9FF648 /* NSData.swift */,
+				B51318230E6DD4F771A58D87D3BE2337 /* NSDate.swift */,
+				98574858E06947AC71B57595769C23F8 /* NSNull.swift */,
+				D4978DD2E637A2EF861B37B7A2055B04 /* NSNumber.swift */,
+				CB142E20748D86A5A1A6106471A37258 /* NSString.swift */,
+				3EF44515CFFF21A712918AF7F2C8E0C1 /* NSURL.swift */,
+				5CA26D589C9F1C5DA2E3F95D9A081C83 /* NSUUID.swift */,
+				710154CBBE4FD4DE6C013D22E784EB8E /* Persistable.swift */,
+				6CFEFE892A3C1B48DFD1FA6744F561D9 /* QueryInterfaceRequest.swift */,
+				514D5455ADDAD3FAF2A97F1EA85D6ECF /* QueryInterfaceSelectQueryDefinition.swift */,
+				D8A6992ECDCFE362C229C5C6AC36FF53 /* RawRepresentable.swift */,
+				311EE7DECC022A860B36A9A2261AF59E /* Record.swift */,
+				2E20870FFF9F025B8A5D0073F7B4B897 /* Row.swift */,
+				BBF8F8C19993D1D69FDC9FEA4684EDBC /* RowAdapter.swift */,
+				FAB134741CD66A54233B566FB569CA35 /* RowConvertible.swift */,
+				649793FC84ED2822E4EE80AB8DC2DFA6 /* SchedulingWatchdog.swift */,
+				71D40258A85FFE536A6B20529867B6BA /* SerializedDatabase.swift */,
+				017DA548920616D783EB6579AE374451 /* SQLCollatedExpression.swift */,
+				61A21CDBDCBED592EC368ABD8A4289A9 /* SQLCollection.swift */,
+				879CEDE52E6CFEC2B2C1674C20CE47A6 /* SQLExpression.swift */,
+				A6FC6E2F58168148E180F86E052CB2B4 /* SQLFunctions.swift */,
+				E448ADDA621B28F3271B0A8D4BFABB3E /* SQLOperators.swift */,
+				C19F04ACD14E5C6C6C9E428584A1248D /* SQLOrderingTerm.swift */,
+				4E329F80E9F01729E9C2D5BD08CC6F0F /* SQLSelectable.swift */,
+				1F49DC22485DDD3BCBFB2F8B94D73761 /* SQLSelectQuery.swift */,
+				0E9E9A0A8FACFDF4FAFFEF72115DEBD0 /* SQLSpecificExpressible.swift */,
+				3E0B713C504C62390B985AE25A276139 /* StandardLibrary.swift */,
+				14697E42CDF211C0BF9FC994C6035403 /* Statement.swift */,
+				5DF2A4915BEBD736BEB31FFAA9F995D6 /* StatementColumnConvertible.swift */,
+				8F0670B6CD7D6B2884205B0AB14A9711 /* TableDefinition.swift */,
+				E05F4A6B02CBA4780B0FD95666171488 /* TableMapping.swift */,
+				F7F111CF2850B3DE73CF2C06E400EABD /* URL.swift */,
+				94F9EFF4EBECFC686C83CDFF8C862F5E /* Utils.swift */,
+				56184340DF256FDA8B455BC68A4A6EAD /* UUID.swift */,
+				2EB36432BAEFCA96C00F1E5237BABD65 /* Support Files */,
+			);
+			path = GRDB.swift;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F800EF15334D07A56278AE07EE535F09 /* Pods */,
+				C4F480765C7B356F85140A8079AC4A6B /* Products */,
+				4F52A82CD79467C883BC0F1D719B6B06 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4F480765C7B356F85140A8079AC4A6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21E429B34E994F2914A391E11116B6D7 /* GRDB.framework */,
+				479FBFF970FE88D02C13915F489A46CC /* Pods_Seapare.framework */,
+				7C5A7CAB64DA6FD3F041F5E52390CF80 /* Pods_SeapareTests.framework */,
+				0089BF2BF472A404D1C9F7A030944751 /* Pods_SeapareUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F800EF15334D07A56278AE07EE535F09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6191AB61B054C040925350E1AFD4614D /* GRDB.swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0460EB677B571F90F4161F36A2D4647D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6716770C3D5E665189CACA53581C7FE /* Pods-SeapareUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EB594B24978070624E96776951F1AF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FCCEB2579A1DDDF9399A6E3F9B89C0C /* Pods-SeapareTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B6768914104A52EC6626D9660B30847 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B3D8A6007993292F1950F8413D0E0AE /* Pods-Seapare-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCD654CC89C14E48884B47F929F2A23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59C0045C70D450200C5F0CCDBEA1FF31 /* GRDB-Bridging.h in Headers */,
+				26376BB644108FFB9FD3C8AD28929C2D /* GRDB.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B54C71485E46C3A759EAC432EC796FA /* Pods-Seapare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D5AC9ED9593D5D7E2AF19075B3A773F /* Build configuration list for PBXNativeTarget "Pods-Seapare" */;
+			buildPhases = (
+				E7E87D0A1BC78D6FD783E92538C80935 /* Sources */,
+				665B64D11217F4688F8421CD48A022B8 /* Frameworks */,
+				6B6768914104A52EC6626D9660B30847 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC9A1A3AFAA0F868EAA54D3CC5F3A675 /* PBXTargetDependency */,
+			);
+			name = "Pods-Seapare";
+			productName = "Pods-Seapare";
+			productReference = 479FBFF970FE88D02C13915F489A46CC /* Pods_Seapare.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4EB28D8B29E569349752BCCEAF15057F /* GRDB.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFAF849DB281DFFB280FBC54917A7488 /* Build configuration list for PBXNativeTarget "GRDB.swift" */;
+			buildPhases = (
+				9ED2212DC6817CC6AEEA0FE0C6B93444 /* Sources */,
+				ED3DD70300EBBFC504D2B2852F097FF7 /* Frameworks */,
+				7DCD654CC89C14E48884B47F929F2A23 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GRDB.swift;
+			productName = GRDB.swift;
+			productReference = 21E429B34E994F2914A391E11116B6D7 /* GRDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C097E21200D146D6E76DAE68E54E4A3 /* Pods-SeapareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA2FAED1AEF7E92C8982DA9F1978FDB7 /* Build configuration list for PBXNativeTarget "Pods-SeapareTests" */;
+			buildPhases = (
+				E275C02B2CE6800FDA06AD1434077D60 /* Sources */,
+				C6BA161AA48884CB66A41404C499C989 /* Frameworks */,
+				2EB594B24978070624E96776951F1AF9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SeapareTests";
+			productName = "Pods-SeapareTests";
+			productReference = 7C5A7CAB64DA6FD3F041F5E52390CF80 /* Pods_SeapareTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7045E6142A1E91B6B4C01FE168FD9B17 /* Pods-SeapareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23A372C2F014C69F00BE7CAE329955CC /* Build configuration list for PBXNativeTarget "Pods-SeapareUITests" */;
+			buildPhases = (
+				5A9FE6A016861147245BE8860D5FE979 /* Sources */,
+				705D0F3CA8F093774CFE5E1EFB2D17D3 /* Frameworks */,
+				0460EB677B571F90F4161F36A2D4647D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SeapareUITests";
+			productName = "Pods-SeapareUITests";
+			productReference = 0089BF2BF472A404D1C9F7A030944751 /* Pods_SeapareUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C4F480765C7B356F85140A8079AC4A6B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EB28D8B29E569349752BCCEAF15057F /* GRDB.swift */,
+				2B54C71485E46C3A759EAC432EC796FA /* Pods-Seapare */,
+				6C097E21200D146D6E76DAE68E54E4A3 /* Pods-SeapareTests */,
+				7045E6142A1E91B6B4C01FE168FD9B17 /* Pods-SeapareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A9FE6A016861147245BE8860D5FE979 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E4CF5AED0353405C6C00AAAFC0A12DD /* Pods-SeapareUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ED2212DC6817CC6AEEA0FE0C6B93444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20D425F209D52B4B2CAAD4658920D1A0 /* CGFloat.swift in Sources */,
+				9D5B73DC377507226653F9A4CE04078E /* Configuration.swift in Sources */,
+				1DC8C6A20B56F1693578240AE13AEAE1 /* Data.swift in Sources */,
+				8282E1276FA8B91EFF60DE1A982574E6 /* Database.swift in Sources */,
+				55CC94D197C6D675F42668DD487F1140 /* DatabaseCoder.swift in Sources */,
+				BAC25794FE87FE36DDED2093B5984B04 /* DatabaseDateComponents.swift in Sources */,
+				174DF78812655C30847AFBFB4FA563A1 /* DatabaseError.swift in Sources */,
+				15FC98D6CAF3BB1567BF178F536A059B /* DatabaseMigrator.swift in Sources */,
+				0F221E203CD254CF189CE4F6642C8340 /* DatabasePool.swift in Sources */,
+				770591E90FCB0DD37DF212E7C1C207D8 /* DatabaseQueue.swift in Sources */,
+				3F2596FC681A376847880A17B9CC0D09 /* DatabaseReader.swift in Sources */,
+				FA592CF674782B7132AE25094A8833B9 /* DatabaseSchemaCache.swift in Sources */,
+				BD40551B886B6F5195B6E0F904EEBC34 /* DatabaseStore.swift in Sources */,
+				B20DE7ABF67FA7585F4DBB85B4ABB5B4 /* DatabaseValue.swift in Sources */,
+				47E7A55073E1709EB647DFCED7BDE0D9 /* DatabaseValueConvertible.swift in Sources */,
+				1DC49A52F16AAA263B98BF3DBE0093CB /* DatabaseWriter.swift in Sources */,
+				D9B5A49555E42886401FFF53654AA578 /* Date.swift in Sources */,
+				6CE36ED237ACC01AAFB6141C4934CFA6 /* FetchedRecordsController.swift in Sources */,
+				5E325E0F5400ACE9FF384502A34B0D8D /* FetchRequest.swift in Sources */,
+				80A83A5B259DC1FCF6B635D6A9F89851 /* GRDB.swift-dummy.m in Sources */,
+				55F71E1D0B85FBFCE7A4B5DA34A0552F /* Migration.swift in Sources */,
+				69A7F13FC5660C102883F4821A49DFA8 /* NSData.swift in Sources */,
+				E22A5B1CA3AF4EAE34172BC4FA6F2BB4 /* NSDate.swift in Sources */,
+				43FF143562992FB2168014B191D24D10 /* NSNull.swift in Sources */,
+				68E5E3C5ED915CF445CB0E82BD596561 /* NSNumber.swift in Sources */,
+				07CD76073B43EE81D6606D8B66634C50 /* NSString.swift in Sources */,
+				5D41C505282FEF51A9BED0936A79C424 /* NSURL.swift in Sources */,
+				C8FCF63D6A072A698B17087BD646946F /* NSUUID.swift in Sources */,
+				290762035780B169D0971604A84B452A /* Persistable.swift in Sources */,
+				D10B4E6CBBBA76BDE497CF6A9D01C2C8 /* QueryInterfaceRequest.swift in Sources */,
+				0FFDC38E5526E6B48A66DAC6EE2E6124 /* QueryInterfaceSelectQueryDefinition.swift in Sources */,
+				9FA7EAD19941A39EBCEE126990FF693C /* RawRepresentable.swift in Sources */,
+				CB19B28FF9B62F77AB085B9095B37DC4 /* Record.swift in Sources */,
+				69FFD4C13A3B3CDC763F62C3A80787E4 /* Row.swift in Sources */,
+				A893A28300F1E68D0485A652B7CF454A /* RowAdapter.swift in Sources */,
+				64306664452A2A00074A256A87033462 /* RowConvertible.swift in Sources */,
+				8FA455B36BC181A409C103D53D241965 /* SchedulingWatchdog.swift in Sources */,
+				7D8B872877A24E51FF2E6A346F909FA5 /* SerializedDatabase.swift in Sources */,
+				07F65E6FF9FC0280883DA72857F06D71 /* SQLCollatedExpression.swift in Sources */,
+				7424BB285577F2FB31274078FC133E55 /* SQLCollection.swift in Sources */,
+				6B696558A6D771B8A65D68627EF91299 /* SQLExpression.swift in Sources */,
+				4E6198B0C5DDE53D98E588BB34F73AA1 /* SQLFunctions.swift in Sources */,
+				C7708F77A3F1508E353D648A36279D05 /* SQLOperators.swift in Sources */,
+				CB200419ECDE1B51200C4F9749E32429 /* SQLOrderingTerm.swift in Sources */,
+				36702DB90AF6077B43B4BC56C17277C6 /* SQLSelectable.swift in Sources */,
+				4C3CCDBD3720596E88EC3D8D645E5A17 /* SQLSelectQuery.swift in Sources */,
+				61FEA3123FEFC8E4759308C5636E07AE /* SQLSpecificExpressible.swift in Sources */,
+				D1CA4179E97DCF5C3645A56310FFADFA /* StandardLibrary.swift in Sources */,
+				6054162E02A28EC5D1BE9D3F4F56E0C6 /* Statement.swift in Sources */,
+				C255964087D44D00DC6F06E5161F81F1 /* StatementColumnConvertible.swift in Sources */,
+				084E61E3FA11227A63E5EB84BB90EC2C /* TableDefinition.swift in Sources */,
+				530506AA6DFF885AF4BB5BE628DF2DE6 /* TableMapping.swift in Sources */,
+				39BE98753E8F51A1C072F3DA544F9DE5 /* URL.swift in Sources */,
+				FF0466B0E1AB29F08CC38BC4BFDBBF8A /* Utils.swift in Sources */,
+				D89B59F741031C5901AA5AF67CA5BEE2 /* UUID.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E275C02B2CE6800FDA06AD1434077D60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C1DA996137F6DDAFF3FE908DEA5C41 /* Pods-SeapareTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E87D0A1BC78D6FD783E92538C80935 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				327BAA16B55BFA413C38FAD65303CAEE /* Pods-Seapare-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC9A1A3AFAA0F868EAA54D3CC5F3A675 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GRDB.swift;
+			target = 4EB28D8B29E569349752BCCEAF15057F /* GRDB.swift */;
+			targetProxy = A036FC562C53105D7005D33027759BCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0482919F1502C20550BB467B5C4292CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88A6E05EA47CEC437BF016BA74412FD9 /* Pods-SeapareTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SeapareTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SeapareTests/Pods-SeapareTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SeapareTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0D08F05C86AD96DB35E9CE686069CEA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B011F032860F46982A257F7A9AF2D5 /* GRDB.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GRDB.swift/GRDB.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GRDB.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GRDB.swift/GRDB.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GRDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2EB9741B920E4F8F2BAEAC4CB1919017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B935A8D89BA86BBE2181342B51864EA /* Pods-SeapareUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SeapareUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SeapareUITests/Pods-SeapareUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SeapareUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3F36E5C235C48066735B4F59BE8A1A9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58E7735F3ABC8C202B83273F73007626 /* Pods-Seapare.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Seapare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seapare/Pods-Seapare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Seapare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		69FD1FF83BA45899FC6E3BFB5804C2FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A0308A81CCD214553F46D2B55162426 /* Pods-SeapareUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SeapareUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SeapareUITests/Pods-SeapareUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SeapareUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		922A7CB23210E71303A3EE2A7DAF7D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDF37BE477B885F8DA9F974D5E8AD5B2 /* Pods-Seapare.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Seapare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seapare/Pods-Seapare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Seapare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B28CAF23A27D230934967BAB49D85B0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83707688F5FCED7DC0F876A76078DBDB /* Pods-SeapareTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SeapareTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SeapareTests/Pods-SeapareTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SeapareTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECFF5E28F77D914FF08C2CE853680ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B011F032860F46982A257F7A9AF2D5 /* GRDB.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GRDB.swift/GRDB.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GRDB.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GRDB.swift/GRDB.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GRDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D5AC9ED9593D5D7E2AF19075B3A773F /* Build configuration list for PBXNativeTarget "Pods-Seapare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F36E5C235C48066735B4F59BE8A1A9E /* Debug */,
+				922A7CB23210E71303A3EE2A7DAF7D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23A372C2F014C69F00BE7CAE329955CC /* Build configuration list for PBXNativeTarget "Pods-SeapareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69FD1FF83BA45899FC6E3BFB5804C2FF /* Debug */,
+				2EB9741B920E4F8F2BAEAC4CB1919017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFAF849DB281DFFB280FBC54917A7488 /* Build configuration list for PBXNativeTarget "GRDB.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D08F05C86AD96DB35E9CE686069CEA9 /* Debug */,
+				ECFF5E28F77D914FF08C2CE853680ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA2FAED1AEF7E92C8982DA9F1978FDB7 /* Build configuration list for PBXNativeTarget "Pods-SeapareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B28CAF23A27D230934967BAB49D85B0F /* Debug */,
+				0482919F1502C20550BB467B5C4292CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

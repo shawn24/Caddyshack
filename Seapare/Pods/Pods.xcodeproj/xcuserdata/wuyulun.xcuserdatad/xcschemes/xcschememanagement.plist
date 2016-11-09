@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>GRDB.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Seapare.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SeapareTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SeapareUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2B54C71485E46C3A759EAC432EC796FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4EB28D8B29E569349752BCCEAF15057F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C097E21200D146D6E76DAE68E54E4A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7045E6142A1E91B6B4C01FE168FD9B17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -19,4 +19,12 @@ class HelpPageViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Actions
+    @IBAction func Back(_ sender: AnyObject) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 }

@@ -1,0 +1,1 @@
+We discussed the database and some pratical functions for the application.
