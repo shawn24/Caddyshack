@@ -91,10 +91,14 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             if let t = self.tabBarController as? TabBarController {
                 if t.phone1 == nil {
                     t.phone1 = t.cellPhoneSearchResultList?.phones[index]
+                    alert("Add \(t.phone1!.cellphone_name!) to the compare list", nil)
+                    
                 } else if t.phone2 == nil {
                     t.phone2 = t.cellPhoneSearchResultList?.phones[index]
+                    alert("Add \(t.phone2!.cellphone_name!) to the compare list", nil)
                 } else {
-                    print("Your compareList is full!")
+                    alert("Your compare List is full", nil)
+                    
                 }
             } else {
                 print("tabBarController is nil")
@@ -104,6 +108,15 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             print("Cannot find the cell")
         }
     }
+    
+    // Mark: alert function
+    func alert(_ title:String?,_ message:String?){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
 }
 
