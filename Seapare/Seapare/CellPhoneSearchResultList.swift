@@ -23,7 +23,7 @@ class CellPhoneSearchResultsList {
     }
     
     func sortByName(_ cellList : [CellPhone]) -> [CellPhone]{
-        guard cellList.count > 1 else { return phones }
+        guard cellList.count > 1 else { return cellList }
         
         let pivot = cellList[cellList.count/2]
         let left = cellList.filter { ($0).cellphone_name < pivot.cellphone_name }
