@@ -201,7 +201,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         if (brand != nil && keyword != "") { brandString = "brand_name = \"" + brand! + "\""}
         if (capacity != nil && keyword != "") { capacityString = "capacity = " + capacity! }
         if (price != nil && keyword != "") {
-            switch price {
+            switch price! {
             case "0-200":
                 priceString = "price_cdn between 0 and 100"
             case "200-500":
@@ -213,7 +213,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
             case "1000-":
                 priceString = "price_cdn > 1000"
             default:
-                <#code#>
+                priceString = "price_cdn > 0"
             }
         }
         if (camera != nil && keyword != "") { cameraString = "camera_mp = " + camera!}
