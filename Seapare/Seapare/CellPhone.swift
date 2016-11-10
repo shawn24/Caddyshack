@@ -35,7 +35,7 @@ extension Reflectable
     }
 }
 
-class CellPhone : Device, Reflectable{
+class CellPhone : Device, Reflectable {
     var phone_id : Int!
     var cellphone_name : String!
     var colour : String!

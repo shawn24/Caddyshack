@@ -175,6 +175,8 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     // MARK: Actions
     @IBAction func search(_ sender: AnyObject) {
         
+        //let phones = getCellPhones(keyword: keywordTextField.text,brand: brandTextPicker.text,capacity: capacityTextPicker.text,price: priceTextPicker.text,camera: cameraTextPicker.text,ram: ramTextPicker.text)
+        
         let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
             
         if let t = self.tabBarController as? TabBarController {

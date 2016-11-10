@@ -82,6 +82,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.ramCell.addGestureRecognizer(ramTap)
             
         } else if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
+            
         } else {
             let phone = tabBar.cellPhoneSearchResultList!.phones[indexPath.row-1]
             cell.nameCell.text = phone.cellphone_name

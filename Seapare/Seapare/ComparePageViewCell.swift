@@ -13,17 +13,22 @@ class ComparePageViewCell:UITableViewCell {
     // Mark: properties
     var lLabel:UILabel!
     var rLabel:UILabel!
+    var hLabel:UILabel!
     
     override func awakeFromNib() {
+        hLabel = UILabel()
         lLabel = UILabel()
         rLabel = UILabel()
         
-        lLabel.frame = CGRect(x: 0, y: 0, width: self.frame.width/2, height: 50)
-        rLabel.frame = CGRect(x: lLabel.frame.origin.x + lLabel.frame.width, y: 0, width: self.frame.width/2, height: 50)
+        hLabel.frame = CGRect(x: 0, y: 0, width: self.frame.width/3, height: 50)
+        lLabel.frame = CGRect(x: hLabel.frame.origin.x + hLabel.frame.width, y: 0, width: self.frame.width/3, height: 50)
+        rLabel.frame = CGRect(x: lLabel.frame.origin.x + lLabel.frame.width, y: 0, width: self.frame.width/3, height: 50)
         
+        hLabel.textAlignment = .center
         lLabel.textAlignment = .center
         rLabel.textAlignment = .center
         
+        self.addSubview(hLabel)
         self.addSubview(lLabel)
         self.addSubview(rLabel)
     }
