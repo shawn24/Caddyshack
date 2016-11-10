@@ -47,7 +47,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             return 0
         }
         
-        return tabBar.cellPhoneSearchResultList!.phones.count + 2
+        return tabBar.cellPhoneSearchResultList!.phones.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,8 +89,6 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.cameraCell.addGestureRecognizer(cameraTap)
             cell.capacityCell.addGestureRecognizer(capacityTap)
             cell.ramCell.addGestureRecognizer(ramTap)
-            
-        } else if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
             
         } else {
             let phone = tabBar.cellPhoneSearchResultList!.phones[indexPath.row-1]

@@ -21,7 +21,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var searchButton: UIButton!
     
     
-    var brandOption = ["","Apple", "Sumsung", "Microsoft", "onePlus"]
+    var brandOption = ["","Apple", "Samsung", "Microsoft", "onePlus"]
     var capacityOption = ["","8G","16G","32G","64G","128G"]
     var priceOption = ["","0-200","200-500","500-700","700-1000","1000-"]
     var cameraOption = ["","2MP","3MP","6MP","8MP","12MP"]
@@ -175,9 +175,37 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     // MARK: Actions
     @IBAction func search(_ sender: AnyObject) {
         
-        //let phones = getCellPhones(keyword: keywordTextField.text,brand: brandTextPicker.text,capacity: capacityTextPicker.text,price: priceTextPicker.text,camera: cameraTextPicker.text,ram: ramTextPicker.text)
+        let keyword = keywordTextField.text
+        let brand = brandTextPicker.text
+        var capacity = ""
+        if capacityTextPicker.text != "" {
+            let indexEndOfText = capacityTextPicker.text?.index((capacityTextPicker.text?.endIndex)!, offsetBy: -1)
+            capacity = (capacityTextPicker.text?.substring(to: indexEndOfText!))!
+        }
+        let price = priceTextPicker.text
+        var camera = cameraTextPicker.text
+        if cameraTextPicker.text != "" {
+            let indexEndOfText = cameraTextPicker.text?.index((cameraTextPicker.text?.endIndex)!, offsetBy: -2)
+            camera = (cameraTextPicker.text?.substring(to: indexEndOfText!))!
+        }
         
-        let phones = getCellPhones(keyword: nil,brand: nil,capacity: nil,price: nil,camera: nil,ram: nil)
+        var ram = ramTextPicker.text
+        if ramTextPicker.text != "" {
+            
+            let indexEndOfText = ramTextPicker.text?.index((ramTextPicker.text?.endIndex)!, offsetBy: -2)
+            let unit = (ramTextPicker.text?.substring(from: indexEndOfText!))!
+            ram = (ramTextPicker.text?.substring(to: indexEndOfText!))!
+            if unit == "GB" {
+                if let num:Int = Int(ram!) {
+                    ram = "\(num*1024)"
+                }
+                
+            }
+        }
+        
+        
+        
+        let phones = getCellPhones(keyword: keyword, brand: brand, capacity: capacity, price: price,camera: camera,ram: ram)
             
         if let t = self.tabBarController as? TabBarController {
             t.cellPhoneSearchResultList = phones
