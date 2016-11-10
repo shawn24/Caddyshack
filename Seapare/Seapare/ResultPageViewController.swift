@@ -50,7 +50,6 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result Table View Cell", for: indexPath as IndexPath) as! ResultTableViewCell
         if indexPath.row == 0 {
             cell.nameCell.text = "name"
@@ -60,6 +59,27 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.capacityCell.text = "capacity"
             cell.ramCell.text = "ram"
             cell.compareCell.setTitle("compare", for: .normal)
+            
+            let nameTap =  UITapGestureRecognizer(target: self, action:#selector(self.nameTap(sender:)))
+            let brandTap = UITapGestureRecognizer(target: self, action:#selector(self.brandTap(sender:)))
+            let priceTap = UITapGestureRecognizer(target: self, action:#selector(self.priceTap(sender:)))
+            let capacityTap = UITapGestureRecognizer(target: self, action:#selector(self.capacityTap(sender:)))
+            let ramTap = UITapGestureRecognizer(target: self, action:#selector(self.ramTap(sender:)))
+            let cameraTap = UITapGestureRecognizer(target: self, action:#selector(self.cameraTap(sender:)))
+            
+            cell.nameCell.isUserInteractionEnabled = true
+            cell.priceCell.isUserInteractionEnabled = true
+            cell.brandCell.isUserInteractionEnabled = true
+            cell.cameraCell.isUserInteractionEnabled = true
+            cell.capacityCell.isUserInteractionEnabled = true
+            cell.ramCell.isUserInteractionEnabled = true
+ 
+            cell.nameCell.addGestureRecognizer(nameTap)
+            cell.priceCell.addGestureRecognizer(priceTap)
+            cell.brandCell.addGestureRecognizer(brandTap)
+            cell.cameraCell.addGestureRecognizer(cameraTap)
+            cell.capacityCell.addGestureRecognizer(capacityTap)
+            cell.ramCell.addGestureRecognizer(ramTap)
             
         } else if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
         } else {
@@ -107,6 +127,30 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         } else {
             print("Cannot find the cell")
         }
+    }
+    
+    func nameTap(sender:UITapGestureRecognizer? = nil){
+        print("tap working 0")
+    }
+    
+    func brandTap(sender: UITapGestureRecognizer? = nil){
+        print("tap working 1")
+    }
+    
+    func priceTap(sender: UITapGestureRecognizer? = nil){
+        print("tap working 2")
+    }
+    
+    func capacityTap(sender: UITapGestureRecognizer? = nil){
+        print("tap working 3")
+    }
+    
+    func ramTap(sender: UITapGestureRecognizer? = nil){
+        print("tap working 4")
+    }
+    
+    func cameraTap(sender: UITapGestureRecognizer? = nil){
+        print("tap working 5")
     }
     
     // Mark: alert function
