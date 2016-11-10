@@ -22,17 +22,6 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     var capacityTapCount = -1
     var ramTapCount = -1
     
-    /*
-     cell.priceCell.text = "Price"
-     cell.brandCell.text = "Brand"
-     cell.cameraCell.text = "Camera (MP)"
-     cell.capacityCell.text = "Capacity (GB)"
-     cell.ramCell.text = "Ram (MB)"
-     cell.compareCell.setTitle("Compare", for: .normal)
-
-     
-     */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
