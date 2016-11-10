@@ -13,6 +13,7 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
     // Mark: properties
     @IBOutlet var table: UITableView!
     
+    var headersArray:Array<String>!
     var phone1properties:Array<Any>!
     var phone2properties:Array<Any>!
     
@@ -20,6 +21,8 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         table.dataSource = self
+        
+        headersArray = CellPhone().properties()
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,7 +38,6 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
             
             if t.phone2 != nil {
                 phone2properties = t.phone2?.values()
-                
             }
         } else {
             print("tabBarController is nil")
@@ -52,7 +54,7 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let num = getRowNum()
+        let num = headersArray.count
         
         return num
     }
@@ -61,13 +63,16 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Compare Page View Cell", for: indexPath as IndexPath) as! ComparePageViewCell
         
-        let num = getRowNum()
+        let num = headersArray.count
         
         if indexPath.row == num - 1 {
+            cell.hLabel.text = ""
             cell.lLabel.text = ""
             cell.rLabel.text = ""
             return cell
         }
+        
+        
         
         if indexPath.row == 0 {
             
@@ -89,29 +94,42 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
             cell.lLabel.addGestureRecognizer(gestureL)
             cell.rLabel.addGestureRecognizer(gestureR)
             
+            cell.hLabel.text = ""
+            
         } else {
+            cell.hLabel.text = headersArray[indexPath.row - 1]
+            
             if phone1properties != nil {
-                let value = phone1properties[indexPath.row - 1]
+                let value:Any? = phone1properties[indexPath.row - 1]
                 if value is String {
                     cell.lLabel.text = value as? String
                 } else {
-                    cell.lLabel.text = "\(value)"
+                    cell.lLabel.text = "\(value!)"
+                }
+                
+                if cell.lLabel.text == "nil" {
+                    cell.lLabel.text = "N/A"
                 }
             } else {
                 cell.lLabel.text = ""
-                //print("phone1properties is nil")
             }
             
             if phone2properties != nil {
-                let value = phone2properties[indexPath.row - 1]
+                let value:Any? = phone2properties[indexPath.row - 1]
                 if value is String {
                     cell.rLabel.text = value as? String
                 } else {
-                    cell.rLabel.text = "\(value)"
+                    if value == nil {
+                        cell.rLabel.text = "N/A"
+                    }
+                    cell.rLabel.text = "\(value!)"
+                }
+                
+                if cell.rLabel.text == "nil" {
+                    cell.rLabel.text = "N/A"
                 }
             } else {
                 cell.rLabel.text = ""
-                //print("phone2properties is nil")
             }
         }
         
