@@ -16,6 +16,22 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     var tabBar:TabBarController!
     
     var nameTapCount = -1
+    var priceTapCount = -1
+    var brandTapCount = -1
+    var cameraTapCount = -1
+    var capacityTapCount = -1
+    var ramTapCount = -1
+    
+    /*
+     cell.priceCell.text = "Price"
+     cell.brandCell.text = "Brand"
+     cell.cameraCell.text = "Camera (MP)"
+     cell.capacityCell.text = "Capacity (GB)"
+     cell.ramCell.text = "Ram (MB)"
+     cell.compareCell.setTitle("Compare", for: .normal)
+
+     
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,19 +71,54 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result Table View Cell", for: indexPath as IndexPath) as! ResultTableViewCell
         if indexPath.row == 0 {
             
-            if nameTapCount == 0 {
-                cell.nameCell.text = "name ⬇️"
-            } else if nameTapCount == 1 {
-                cell.nameCell.text = "name ⬆️"
+            cell.nameCell.text = "Name"
+            cell.priceCell.text = "Price"
+            cell.brandCell.text = "Brand"
+            cell.cameraCell.text = "Camera (MP)"
+            cell.capacityCell.text = "Capacity (GB)"
+            cell.ramCell.text = "Ram (MB)"
+            cell.compareCell.setTitle("Compare", for: .normal)
+            
+            if tabBar.search {
+                tabBar.search = false
+                self.setHeadersCountToNormal()
             } else {
-                cell.nameCell.text = "name"
+                if nameTapCount == 0 {
+                    cell.nameCell.text = "Name ⬇️"
+                } else if nameTapCount == 1 {
+                    cell.nameCell.text = "Name ⬆️"
+                }
+                
+                if priceTapCount == 0 {
+                    cell.priceCell.text = "Price ⬇️"
+                } else if priceTapCount == 1 {
+                    cell.priceCell.text = "Price ⬆️"
+                }
+                
+                if brandTapCount == 0 {
+                    cell.brandCell.text = "Brand ⬇️"
+                } else if brandTapCount == 1 {
+                    cell.brandCell.text = "Brand ⬆️"
+                }
+                
+                if cameraTapCount == 0 {
+                    cell.cameraCell.text = "Camera ⬇️"
+                } else if cameraTapCount == 1 {
+                    cell.cameraCell.text = "Camera ⬆️"
+                }
+                
+                if capacityTapCount == 0 {
+                    cell.capacityCell.text = "Capacity ⬇️"
+                } else if capacityTapCount == 1 {
+                    cell.capacityCell.text = "Capacity ⬆️"
+                }
+                
+                if ramTapCount == 0 {
+                    cell.ramCell.text = "Ram ⬇️"
+                } else if ramTapCount == 1 {
+                    cell.ramCell.text = "Ram ⬆️"
+                }
             }
-            cell.priceCell.text = "price"
-            cell.brandCell.text = "brand"
-            cell.cameraCell.text = "camera"
-            cell.capacityCell.text = "capacity"
-            cell.ramCell.text = "ram"
-            cell.compareCell.setTitle("compare", for: .normal)
             
             let nameTap =  UITapGestureRecognizer(target: self, action:#selector(self.nameTap(sender:)))
             let brandTap = UITapGestureRecognizer(target: self, action:#selector(self.brandTap(sender:)))
@@ -138,6 +189,10 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func nameTap(sender:UITapGestureRecognizer? = nil){
+        if nameTapCount == -1 {
+            self.setHeadersCountToNormal()
+        }
+        
         nameTapCount = (nameTapCount+1)%2
         var phones:[CellPhone]!
 
@@ -152,23 +207,93 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func brandTap(sender: UITapGestureRecognizer? = nil){
-        print("tap working 1")
+        if brandTapCount == -1 {
+            self.setHeadersCountToNormal()
+        }
+        
+        brandTapCount = (brandTapCount+1)%2
+        var phones:[CellPhone]!
+        
+        if brandTapCount == 0 {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByBrand((tabBar.cellPhoneSearchResultList?.phones)!))!
+        } else {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByBrand((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
+        }
+        
+        tabBar.cellPhoneSearchResultList?.phones = phones
+        table.reloadData()
     }
     
     func priceTap(sender: UITapGestureRecognizer? = nil){
-        print("tap working 2")
+        if priceTapCount == -1 {
+            self.setHeadersCountToNormal()
+        }
+        
+        priceTapCount = (priceTapCount+1)%2
+        var phones:[CellPhone]!
+        
+        if priceTapCount == 0 {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByPrice((tabBar.cellPhoneSearchResultList?.phones)!))!
+        } else {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByPrice((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
+        }
+        
+        tabBar.cellPhoneSearchResultList?.phones = phones
+        table.reloadData()
     }
     
     func capacityTap(sender: UITapGestureRecognizer? = nil){
-        print("tap working 3")
+        if capacityTapCount == -1 {
+            self.setHeadersCountToNormal()
+        }
+        
+        capacityTapCount = (capacityTapCount+1)%2
+        var phones:[CellPhone]!
+        
+        if capacityTapCount == 0 {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByCapacity((tabBar.cellPhoneSearchResultList?.phones)!))!
+        } else {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByCapacity((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
+        }
+        
+        tabBar.cellPhoneSearchResultList?.phones = phones
+        table.reloadData()
     }
     
     func ramTap(sender: UITapGestureRecognizer? = nil){
-        print("tap working 4")
+        if ramTapCount == -1 {
+            self.setHeadersCountToNormal()
+        }
+        
+        ramTapCount = (ramTapCount+1)%2
+        var phones:[CellPhone]!
+        
+        if ramTapCount == 0 {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByRam((tabBar.cellPhoneSearchResultList?.phones)!))!
+        } else {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByRam((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
+        }
+        
+        tabBar.cellPhoneSearchResultList?.phones = phones
+        table.reloadData()
     }
     
     func cameraTap(sender: UITapGestureRecognizer? = nil){
-        print("tap working 5")
+        if cameraTapCount == -1 {
+            self.setHeadersCountToNormal()
+        }
+        
+        cameraTapCount = (cameraTapCount+1)%2
+        var phones:[CellPhone]!
+        
+        if cameraTapCount == 0 {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByCamera((tabBar.cellPhoneSearchResultList?.phones)!))!
+        } else {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByCamera((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
+        }
+        
+        tabBar.cellPhoneSearchResultList?.phones = phones
+        table.reloadData()
     }
     
     // Mark: alert function
@@ -179,6 +304,15 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         self.present(alert, animated: true, completion: nil)
     }
     
+    // Mark: untilities
+    func setHeadersCountToNormal(){
+        nameTapCount = -1
+        priceTapCount = -1
+        brandTapCount = -1
+        cameraTapCount = -1
+        capacityTapCount = -1
+        ramTapCount = -1
+    }
 
 }
 

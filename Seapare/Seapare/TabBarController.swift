@@ -12,4 +12,5 @@ class TabBarController: UITabBarController {
     var cellPhoneSearchResultList:CellPhoneSearchResultsList?
     var phone1:CellPhone?
     var phone2:CellPhone?
+    var search:Bool = false
 }

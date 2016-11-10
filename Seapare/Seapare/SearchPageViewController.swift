@@ -210,6 +210,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         if let t = self.tabBarController as? TabBarController {
             t.cellPhoneSearchResultList = phones
             t.selectedIndex = 1
+            t.search = true
             
         } else {
             print("tabBarController is nil")
