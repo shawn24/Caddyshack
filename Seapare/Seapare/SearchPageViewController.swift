@@ -198,9 +198,9 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         var ramString = ""
         var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id"
         if (keyword != nil && keyword != "") { keywordString = ("name like \"%" + keyword! + "%\"")}
-        if (brand != nil && keyword != "") { brandString = "brand_name = \"" + brand! + "\""}
-        if (capacity != nil && keyword != "") { capacityString = "capacity = " + capacity! }
-        if (price != nil && keyword != "") {
+        if (brand != nil && brand != "") { brandString = "brand_name = \"" + brand! + "\""}
+        if (capacity != nil && capacity != "") { capacityString = "capacity = " + capacity! }
+        if (price != nil && price != "") {
             switch price! {
             case "0-200":
                 priceString = "price_cdn between 0 and 100"
@@ -216,8 +216,8 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
                 priceString = "price_cdn > 0"
             }
         }
-        if (camera != nil && keyword != "") { cameraString = "camera_mp = " + camera!}
-        if (ram != nil && keyword != "") { ramString = "ram_mb = " + ram!}
+        if (camera != nil && camera != "") { cameraString = "camera_mp = " + camera!}
+        if (ram != nil && ram != "") { ramString = "ram_mb = " + ram!}
         
         var criteria_list = [keywordString, brandString, capacityString, priceString, cameraString, ramString].filter{(str) in str != ""}
         if !criteria_list.isEmpty {
