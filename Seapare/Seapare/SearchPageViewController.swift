@@ -197,12 +197,27 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         var cameraString = ""
         var ramString = ""
         var queryString = "SELECT * FROM phone_table pt left join device_type_table dtt on pt.device_type_id = dtt.device_type_id left join brand_table bt on bt.brand_id = pt.brand_id"
-        if (keyword != nil) { keywordString = ("name like \"%" + keyword! + "%\"")}
-        if (brand != nil) { brandString = "brand_name = \"" + brand! + "\""}
-        if (capacity != nil) { capacityString = "capacity = " + capacity! }
-        if (price != nil) { priceString = "price_cdn = " + price!}
-        if (camera != nil) { cameraString = "camera_mp = " + camera!}
-        if (ram != nil) { ramString = "ram_mb = " + ram!}
+        if (keyword != nil && keyword != "") { keywordString = ("name like \"%" + keyword! + "%\"")}
+        if (brand != nil && keyword != "") { brandString = "brand_name = \"" + brand! + "\""}
+        if (capacity != nil && keyword != "") { capacityString = "capacity = " + capacity! }
+        if (price != nil && keyword != "") {
+            switch price {
+            case "0-200":
+                priceString = "price_cdn between 0 and 100"
+            case "200-500":
+                priceString = "price_cdn between 200 and 500"
+            case "500-700":
+                priceString = "price_cdn between 500 and 700"
+            case "700-1000":
+                priceString = "price_cdn between 700 and 1000"
+            case "1000-":
+                priceString = "price_cdn > 1000"
+            default:
+                <#code#>
+            }
+        }
+        if (camera != nil && keyword != "") { cameraString = "camera_mp = " + camera!}
+        if (ram != nil && keyword != "") { ramString = "ram_mb = " + ram!}
         
         var criteria_list = [keywordString, brandString, capacityString, priceString, cameraString, ramString].filter{(str) in str != ""}
         if !criteria_list.isEmpty {
