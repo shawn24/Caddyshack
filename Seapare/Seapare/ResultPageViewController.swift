@@ -15,6 +15,8 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     
     var tabBar:TabBarController!
     
+    var nameTapCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -131,7 +133,28 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func nameTap(sender:UITapGestureRecognizer? = nil){
-        print("tap working 0")
+        nameTapCount = (nameTapCount+1)%2
+        var phones:[CellPhone]!
+
+        if nameTapCount == 1 {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByName((tabBar.cellPhoneSearchResultList?.phones)!))!
+            /*
+            if let cell = table.cellForRow(at: IndexPath(row: 0, section: 0)) as? ResultTableViewCell{
+                cell.nameCell.text = "name ⬆️"
+                print(cell.nameCell.text)
+            }
+ */
+        } else {
+            phones = (tabBar.cellPhoneSearchResultList?.sortByName((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
+            /*
+            if let cell = table.cellForRow(at: IndexPath(row: 0, section: 0)) as? ResultTableViewCell{
+                cell.nameCell.text = "name ⬇️"
+            }
+ */
+        }
+        
+        tabBar.cellPhoneSearchResultList?.phones = phones
+        table.reloadData()
     }
     
     func brandTap(sender: UITapGestureRecognizer? = nil){
