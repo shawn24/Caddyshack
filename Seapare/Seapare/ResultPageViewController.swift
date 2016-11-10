@@ -15,7 +15,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     
     var tabBar:TabBarController!
     
-    var nameTapCount = 0
+    var nameTapCount = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,14 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Result Table View Cell", for: indexPath as IndexPath) as! ResultTableViewCell
         if indexPath.row == 0 {
-            cell.nameCell.text = "name"
+            
+            if nameTapCount == 0 {
+                cell.nameCell.text = "name ⬇️"
+            } else if nameTapCount == 1 {
+                cell.nameCell.text = "name ⬆️"
+            } else {
+                cell.nameCell.text = "name"
+            }
             cell.priceCell.text = "price"
             cell.brandCell.text = "brand"
             cell.cameraCell.text = "camera"
@@ -136,21 +143,10 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         nameTapCount = (nameTapCount+1)%2
         var phones:[CellPhone]!
 
-        if nameTapCount == 1 {
+        if nameTapCount == 0 {
             phones = (tabBar.cellPhoneSearchResultList?.sortByName((tabBar.cellPhoneSearchResultList?.phones)!))!
-            /*
-            if let cell = table.cellForRow(at: IndexPath(row: 0, section: 0)) as? ResultTableViewCell{
-                cell.nameCell.text = "name ⬆️"
-                print(cell.nameCell.text)
-            }
- */
         } else {
             phones = (tabBar.cellPhoneSearchResultList?.sortByName((tabBar.cellPhoneSearchResultList?.phones)!))!.reversed()
-            /*
-            if let cell = table.cellForRow(at: IndexPath(row: 0, section: 0)) as? ResultTableViewCell{
-                cell.nameCell.text = "name ⬇️"
-            }
- */
         }
         
         tabBar.cellPhoneSearchResultList?.phones = phones
