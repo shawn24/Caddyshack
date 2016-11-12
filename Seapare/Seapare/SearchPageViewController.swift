@@ -196,7 +196,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
             let unit = (ramTextPicker.text?.substring(from: indexEndOfText!))!
             ram = (ramTextPicker.text?.substring(to: indexEndOfText!))!
             if unit == "GB" {
-                if let num:Int = Int(ram!) {
+                if let num:Float = Float(ram!) {
                     ram = "\(num*1024)"
                 }
                 
