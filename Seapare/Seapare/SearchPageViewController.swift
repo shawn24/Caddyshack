@@ -204,7 +204,6 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         }
         
         
-        
         let phones = getCellPhones(keyword: keyword, brand: brand, capacity: capacity, price: price,camera: camera,ram: ram)
             
         if let t = self.tabBarController as? TabBarController {
