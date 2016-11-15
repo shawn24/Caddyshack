@@ -24,7 +24,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     var brandOption = ["","Apple", "Samsung", "Microsoft", "onePlus"]
     var capacityOption = ["","8G","16G","32G","64G","128G","256G"]
     var priceOption = ["","0-200","200-500","500-700","700-1000","1000-"]
-    var cameraOption = ["","3.15MP","5MP","6MP","8MP","12MP","13MP","16MP","20MP"]
+    var cameraOption = ["","3.15MP","5MP","8MP","12MP","13MP","16MP","20MP"]
     var ramOption = ["","256MB","512MB","1GB","1.5GB","2GB","3GB","4GB","6GB"]
     
     var selectedPickerOption:Array<String>?
