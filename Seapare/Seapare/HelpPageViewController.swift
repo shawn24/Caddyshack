@@ -13,6 +13,9 @@ class HelpPageViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Set background picture
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
     }
     
     override func didReceiveMemoryWarning() {
