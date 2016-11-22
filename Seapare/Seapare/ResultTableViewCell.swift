@@ -58,10 +58,13 @@ class ResultTableViewCell: UITableViewCell {
             if cell is UILabel {
                 let c = cell as! UILabel
                 c.textAlignment = .center
+                c.textColor = UIColor.white
             } else if cell is UIButton {
-                //let c = cell as! UIButton
+                let c = cell as! UIButton
+                c.setTitleColor(UIColor.yellow, for: .normal)
             }
             
+            cell.layer.borderColor = UIColor.white.cgColor
             cell.layer.borderWidth = 1
             
             self.addSubview(cell)

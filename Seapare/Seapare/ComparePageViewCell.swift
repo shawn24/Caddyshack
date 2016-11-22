@@ -28,6 +28,10 @@ class ComparePageViewCell:UITableViewCell {
         lLabel.textAlignment = .center
         rLabel.textAlignment = .center
         
+        hLabel.textColor = UIColor.white
+        lLabel.textColor = UIColor.white
+        rLabel.textColor = UIColor.white
+        
         self.addSubview(hLabel)
         self.addSubview(lLabel)
         self.addSubview(rLabel)

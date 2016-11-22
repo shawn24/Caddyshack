@@ -25,6 +25,9 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set background picture
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        
         tabBar = self.tabBarController as! TabBarController
         
         table.dataSource = self

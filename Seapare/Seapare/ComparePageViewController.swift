@@ -19,6 +19,10 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set background picture
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        
         // Do any additional setup after loading the view, typically from a nib.
         table.dataSource = self
         
