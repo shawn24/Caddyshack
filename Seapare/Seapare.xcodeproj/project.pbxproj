@@ -14,6 +14,9 @@
 		2551CE791DA03B9000B7410A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE781DA03B9000B7410A /* TabBarController.swift */; };
 		2551CE7D1DA0556E00B7410A /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */; };
 		2575773B1DD2B30300922663 /* ComparePageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2575773A1DD2B30300922663 /* ComparePageViewCell.swift */; };
+		257B3FBB1DEB72C30091DC31 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257B3FBA1DEB72C30091DC31 /* DetailPageViewController.swift */; };
+		257B3FBD1DEB7DFC0091DC31 /* DetailPageNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257B3FBC1DEB7DFC0091DC31 /* DetailPageNavController.swift */; };
+		257B3FBF1DEB81730091DC31 /* DetailPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257B3FBE1DEB81730091DC31 /* DetailPageTableViewCell.swift */; };
 		2911E3601DCFBC960067F693 /* CoreDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911E35F1DCFBC960067F693 /* CoreDataAccess.swift */; };
 		29724C271D9EF765001140B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C261D9EF765001140B6 /* AppDelegate.swift */; };
 		29724C291D9EF765001140B6 /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29724C281D9EF765001140B6 /* SearchPageViewController.swift */; };
@@ -57,6 +60,9 @@
 		2551CE781DA03B9000B7410A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		2575773A1DD2B30300922663 /* ComparePageViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparePageViewCell.swift; sourceTree = "<group>"; };
+		257B3FBA1DEB72C30091DC31 /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		257B3FBC1DEB7DFC0091DC31 /* DetailPageNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageNavController.swift; sourceTree = "<group>"; };
+		257B3FBE1DEB81730091DC31 /* DetailPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageTableViewCell.swift; sourceTree = "<group>"; };
 		2911E35F1DCFBC960067F693 /* CoreDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataAccess.swift; sourceTree = "<group>"; };
 		29724C231D9EF765001140B6 /* Seapare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seapare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29724C261D9EF765001140B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 				2551CE7C1DA0556E00B7410A /* ResultTableViewCell.swift */,
 				2528CEA71DA07E6400CEBD9A /* ComparePageViewController.swift */,
 				2575773A1DD2B30300922663 /* ComparePageViewCell.swift */,
+				257B3FBA1DEB72C30091DC31 /* DetailPageViewController.swift */,
+				257B3FBC1DEB7DFC0091DC31 /* DetailPageNavController.swift */,
+				257B3FBE1DEB81730091DC31 /* DetailPageTableViewCell.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -511,11 +520,14 @@
 				3A2E70DC1DA343C100E25FD8 /* Brand.swift in Sources */,
 				29724C291D9EF765001140B6 /* SearchPageViewController.swift in Sources */,
 				3A2E70DE1DA3441E00E25FD8 /* Device.swift in Sources */,
+				257B3FBB1DEB72C30091DC31 /* DetailPageViewController.swift in Sources */,
 				2551CE791DA03B9000B7410A /* TabBarController.swift in Sources */,
 				29724C271D9EF765001140B6 /* AppDelegate.swift in Sources */,
 				2575773B1DD2B30300922663 /* ComparePageViewCell.swift in Sources */,
 				3A1C069A1DB0B7D8009AC213 /* CellPhoneSearchResultList.swift in Sources */,
+				257B3FBD1DEB7DFC0091DC31 /* DetailPageNavController.swift in Sources */,
 				2551CE7D1DA0556E00B7410A /* ResultTableViewCell.swift in Sources */,
+				257B3FBF1DEB81730091DC31 /* DetailPageTableViewCell.swift in Sources */,
 				2528CEA81DA07E6400CEBD9A /* ComparePageViewController.swift in Sources */,
 				3A2E70E01DA345FD00E25FD8 /* CellPhone.swift in Sources */,
 				2551CE771DA03AF900B7410A /* HelpPageViewController.swift in Sources */,

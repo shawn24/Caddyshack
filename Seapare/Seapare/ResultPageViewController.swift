@@ -22,6 +22,8 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
     var capacityTapCount = -1
     var ramTapCount = -1
     
+    var sendPhone:CellPhone!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -136,6 +138,10 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         } else {
             let phone = tabBar.cellPhoneSearchResultList!.phones[indexPath.row-1]
             cell.nameCell.text = phone.cellphone_name
+            let detailPageTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.detailPageSelector(sender:)))
+            cell.nameCell.isUserInteractionEnabled = true
+            cell.nameCell.addGestureRecognizer(detailPageTapGestureRecognizer)
+            
             cell.brandCell.text = phone.brand_obj.brand_name
             cell.priceCell.text = "\(phone.price!)"
             cell.cameraCell.text = "\(phone.camera_resolution!)"
@@ -286,6 +292,23 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         
         tabBar.cellPhoneSearchResultList?.phones = phones
         table.reloadData()
+    }
+    
+    func detailPageSelector(sender: UITapGestureRecognizer) {
+        if let cell = sender.view?.superview as? ResultTableViewCell {
+            sendPhone = tabBar.cellPhoneSearchResultList?.phones[(table.indexPath(for: cell)?.row)!-1]
+            self.performSegue(withIdentifier: "detail page", sender: self)
+        }
+    }
+    
+    // Mark: segue function
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "detail page"){
+            if let destination = segue.destination as? DetailPageNavController {
+                destination.phone = sendPhone
+            }
+            
+        }
     }
     
     // Mark: alert function
