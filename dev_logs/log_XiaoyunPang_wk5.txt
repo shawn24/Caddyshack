@@ -1,0 +1,4 @@
+Week 5: Oct. 17 - Oct. 23
+
+- Implemented compare list class
+- Discussed database structure

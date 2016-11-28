@@ -1,0 +1,5 @@
+Week 8: Nov. 7 - Nov. 13
+
+- Test functionalities
+- Connect back-end to front-end
+- Minor bug fixes
