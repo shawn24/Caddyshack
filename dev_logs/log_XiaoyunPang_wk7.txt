@@ -1,0 +1,5 @@
+Week 7: Oct. 31 - Nov. 6
+
+- Implement sorting algorithm
+- Implement database codes
+- Make queries to work
