@@ -85,5 +85,70 @@ class CellPhone : Device, Reflectable {
     func compareWeight(c : CellPhone) -> Int { return self.weight - c.weight }
     
     func compareCamera(c : CellPhone) -> Float { return self.camera_resolution - c.camera_resolution }
+    
+    func compareStandby_hour(c: CellPhone) -> Int { return self.standby_hour - c.standby_hour }
+    
+    func compareWarranty(c: CellPhone) -> Int { return self.warranty - c.warranty }
+    
+    func compareGPS(c: CellPhone) -> Int {
+        let a:Bool! = self.gps_flag
+        let b:Bool! = c.gps_flag
+        
+        if (a && !b){
+            return 1
+        } else if (!a && b){
+            return -1
+        }
+        return 0
+    }
+    
+    func compareBluetooth(c: CellPhone) -> Int {
+        let a:Bool! = self.bluetooth_flag
+        let b:Bool! = c.bluetooth_flag
+        
+        if (a && !b){
+            return 1
+        } else if (!a && b){
+            return -1
+        }
+        return 0
+    }
+    
+    func compareNFC(c: CellPhone) -> Int {
+        let a:Bool! = self.nfc_flag
+        let b:Bool! = c.nfc_flag
+        
+        if (a && !b){
+            return 1
+        } else if (!a && b){
+            return -1
+        }
+        return 0
+    }
+    
+    func compareMemoryCardSupport(c: CellPhone) -> Int {
+        let a:Bool! = self.memory_card_support_flag
+        let b:Bool! = c.memory_card_support_flag
+        
+        if (a && !b){
+            return 1
+        } else if (!a && b){
+            return -1
+        }
+        return 0
+    }
+    
+    func compareFingerprint(c: CellPhone) -> Int {
+        let a:Bool! = self.fingerprint_flag
+        let b:Bool! = c.fingerprint_flag
+        
+        if (a && !b){
+            return 1
+        } else if (!a && b){
+            return -1
+        }
+        return 0
+    }
+    
 }
 

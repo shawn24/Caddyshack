@@ -30,7 +30,6 @@ class DetailPageViewController: UIViewController,UITableViewDataSource, UITableV
         phoneHeaders = CellPhone().properties()
         if navController.phone != nil {
             phoneValues = navController.phone.values()
-            print(phoneValues)
         }
         
         

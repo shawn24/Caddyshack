@@ -16,6 +16,7 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
     var headersArray:Array<String>!
     var phone1properties:Array<Any>!
     var phone2properties:Array<Any>!
+    var tabBarController_m:TabBarController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
         table.dataSource = self
         
         headersArray = CellPhone().properties()
+        
+        tabBarController_m = self.tabBarController as! TabBarController
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,6 +51,8 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
         table.reloadData()
+        tabBarController_m = self.tabBarController as! TabBarController
+        
     }
     
     // MARK: Table configurations
@@ -120,20 +125,135 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
             
             if phone2properties != nil {
                 let value:Any? = phone2properties[indexPath.row - 1]
-                if value is String {
-                    cell.rLabel.text = value as? String
-                } else {
-                    if value == nil {
-                        cell.rLabel.text = "N/A"
-                    }
-                    cell.rLabel.text = "\(value!)"
+                
+                if value == nil {
+                    cell.rLabel.text = "N/A"
                 }
+                cell.rLabel.text = "\(value!)"
+                
                 
                 if cell.rLabel.text == "nil" {
                     cell.rLabel.text = "N/A"
                 }
             } else {
                 cell.rLabel.text = ""
+            }
+            
+            // reset text color
+            cell.lLabel.textColor = UIColor.white
+            cell.rLabel.textColor = UIColor.white
+            
+            // highlight the higher value
+            if tabBarController_m.phone1 != nil && tabBarController_m.phone2 != nil {
+                switch headersArray[indexPath.row - 1] {
+                case "price":
+                    if(tabBarController_m.phone1!.comparePrice(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.comparePrice(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break
+                case "screen_size":
+                    if (tabBarController_m.phone1!.compareScreenSize(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareScreenSize(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break
+                case "ppi":
+                    if (tabBarController_m.phone1!.comparePPI(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.comparePPI(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+
+                    break
+                    
+                case "resolution":
+                    break
+                case "ram":
+                    if (tabBarController_m.phone1!.compareRam(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareRam(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    
+                    break
+                
+                case "capacity":
+                    if (tabBarController_m.phone1!.compareCapacity(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareCapacity(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "device_size":
+                    if (tabBarController_m.phone1!.compareDeviceSize(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareDeviceSize(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "camera_resolution":
+                    if (tabBarController_m.phone1!.compareCamera(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareCamera(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "warranty":
+                    if (tabBarController_m.phone1!.compareWarranty(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareWarranty(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "standby_hour":
+                    if (tabBarController_m.phone1!.compareStandby_hour(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareStandby_hour(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "gps_flag":
+                    if (tabBarController_m.phone1!.compareGPS(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareGPS(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "bluetooth_flag":
+                    if (tabBarController_m.phone1!.compareBluetooth(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareBluetooth(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "nfc_flag":
+                    if (tabBarController_m.phone1!.compareNFC(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareNFC(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "memory_card_support_flag":
+                    if (tabBarController_m.phone1!.compareMemoryCardSupport(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareMemoryCardSupport(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                case "fingerprint_flag":
+                    if (tabBarController_m.phone1!.compareFingerprint(c: tabBarController_m.phone2!)>0) {
+                        cell.lLabel.textColor = UIColor.red
+                    } else if (tabBarController_m.phone1!.compareFingerprint(c: tabBarController_m.phone2!)<0) {
+                        cell.rLabel.textColor = UIColor.red
+                    }
+                    break;
+                    
+                default:
+                    break
+                }
             }
         }
         
