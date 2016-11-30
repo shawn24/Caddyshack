@@ -32,6 +32,8 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get latest exchange rate from web
+        getLatestCurrencyRate()
         
         // Set background picture
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
@@ -319,6 +321,16 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         }
         
         return phoneList
+    }
+    
+    func getLatestCurrencyRate() {
+        var request = URLRequest(url: URL(string: "http://api.fixer.io/latest?base=CAD&symbols=USD,GBP,EUR,CNY,JPY,AUD,RUB")!)
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        session.dataTask(with: request) {data, response, err in
+            print("Entered the completionHandler")
+            print(response)
+        }.resume()
     }
 }
 
