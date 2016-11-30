@@ -157,7 +157,7 @@ class CellPhone : Device, Reflectable {
         if let rate = CellPhone.exchange_rate[code]{
             return Float(rate*price)
         }else{
-            print("No such currency code \(code), returning CAD price")
+            //print("No such currency code \(code), returning CAD price")
             return price;
         }
     }

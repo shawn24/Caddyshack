@@ -43,6 +43,13 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         //get latest exchange rate from web
         getLatestCurrencyRate()
         
+        var rates = Array(CellPhone.exchange_rate.keys)
+        rates.append("CAD")
+        currencyOption = rates.sorted()
+        if let index = currencyOption.index(of: "CAD") {
+            currencyOptionIndex = index
+        }
+        
         // Set background picture
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
         
@@ -258,10 +265,11 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         let phones = getCellPhones(keyword: keyword, brand: brand, capacity: capacity, price: price,camera: camera,ram: ram)
             
         if let t = self.tabBarController as? TabBarController {
+            t.currency = currencyTextPicker.text
             t.cellPhoneSearchResultList = phones
             t.selectedIndex = 1
             t.search = true
-            t.currency = currencyTextPicker.text
+            
             
         } else {
             print("tabBarController is nil")
@@ -382,10 +390,10 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
                     let codes = ["AUD","CNY","EUR","GBP","JPY","RUB","USD"]
                     for item in codes {
                         if let rate = rates[item] as? Float {
-                            print("\(item) is \(rate)")
-                            print("default \(item) is \(CellPhone.exchange_rate[item])")
+                            //print("\(item) is \(rate)")
+                            //print("default \(item) is \(CellPhone.exchange_rate[item])")
                             CellPhone.exchange_rate[item] = rate
-                            print("new \(item) is \(CellPhone.exchange_rate[item])")
+                            //print("new \(item) is \(CellPhone.exchange_rate[item])")
                         }
                     }
                 }

@@ -149,7 +149,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
             cell.nameCell.addGestureRecognizer(detailPageTapGestureRecognizer)
             
             cell.brandCell.text = phone.brand_obj.brand_name
-            cell.priceCell.text = "\(phone.price!)"
+            cell.priceCell.text = "\(phone.getPriceByCurrency(code: tabBar.currency!))"
             cell.cameraCell.text = "\(phone.camera_resolution!)"
             cell.capacityCell.text = "\(phone.capacity!)"
             cell.ramCell.text = "\(phone.ram!)"

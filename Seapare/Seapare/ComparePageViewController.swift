@@ -134,6 +134,12 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
                 } else if cell.lLabel.text == "false" {
                     cell.lLabel.text = "No"
                 }
+                
+                if headersArray[indexPath.row - 1] == "price" {
+                    if let text = tabBarController_m.phone1?.getPriceByCurrency(code: tabBarController_m.currency!){
+                        cell.lLabel.text = "\(text)"
+                    }
+                }
             } else {
                 cell.lLabel.text = ""
             }
@@ -153,6 +159,11 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
                     cell.rLabel.text = "Yes"
                 } else if cell.rLabel.text == "false" {
                     cell.rLabel.text = "No"
+                }
+                if headersArray[indexPath.row - 1] == "price" {
+                    if let text = tabBarController_m.phone2?.getPriceByCurrency(code: tabBarController_m.currency!){
+                        cell.rLabel.text = "\(text)"
+                    }
                 }
             } else {
                 cell.rLabel.text = ""
