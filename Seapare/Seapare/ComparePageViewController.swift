@@ -106,7 +106,14 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
             cell.hLabel.text = ""
             
         } else {
-            cell.hLabel.text = headersArray[indexPath.row - 1]
+            cell.hLabel.text = headersArray[indexPath.row - 1].replacingOccurrences(of: "_", with: " ").replacingOccurrences(of: " flag", with: "")
+            
+            if cell.hLabel.text == "camera resolution" {
+                cell.hLabel.text = "camera"
+            } else if cell.hLabel.text == "memory card support" {
+                cell.hLabel.text = "extra sd card"
+            }
+            
             
             if phone1properties != nil {
                 let value:Any? = phone1properties[indexPath.row - 1]
@@ -118,6 +125,10 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 if cell.lLabel.text == "nil" {
                     cell.lLabel.text = "N/A"
+                } else if cell.lLabel.text == "true" {
+                    cell.lLabel.text = "Yes"
+                } else if cell.lLabel.text == "false" {
+                    cell.lLabel.text = "No"
                 }
             } else {
                 cell.lLabel.text = ""
@@ -134,6 +145,10 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
                 
                 if cell.rLabel.text == "nil" {
                     cell.rLabel.text = "N/A"
+                } else if cell.rLabel.text == "true" {
+                    cell.rLabel.text = "Yes"
+                } else if cell.rLabel.text == "false" {
+                    cell.rLabel.text = "No"
                 }
             } else {
                 cell.rLabel.text = ""
@@ -145,26 +160,28 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
             
             // highlight the higher value
             if tabBarController_m.phone1 != nil && tabBarController_m.phone2 != nil {
+                
+                let color = UIColor.green
                 switch headersArray[indexPath.row - 1] {
                 case "price":
-                    if(tabBarController_m.phone1!.comparePrice(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
-                    } else if (tabBarController_m.phone1!.comparePrice(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                    if(tabBarController_m.phone1!.comparePrice(c: tabBarController_m.phone2!)<0) {
+                        cell.lLabel.textColor = color
+                    } else if (tabBarController_m.phone1!.comparePrice(c: tabBarController_m.phone2!)>0) {
+                        cell.rLabel.textColor = color
                     }
                     break
                 case "screen_size":
                     if (tabBarController_m.phone1!.compareScreenSize(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareScreenSize(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break
                 case "ppi":
                     if (tabBarController_m.phone1!.comparePPI(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.comparePPI(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
 
                     break
@@ -173,81 +190,81 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
                     break
                 case "ram":
                     if (tabBarController_m.phone1!.compareRam(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareRam(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     
                     break
                 
                 case "capacity":
                     if (tabBarController_m.phone1!.compareCapacity(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareCapacity(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "device_size":
                     if (tabBarController_m.phone1!.compareDeviceSize(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareDeviceSize(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "camera_resolution":
                     if (tabBarController_m.phone1!.compareCamera(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareCamera(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "warranty":
                     if (tabBarController_m.phone1!.compareWarranty(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareWarranty(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "standby_hour":
                     if (tabBarController_m.phone1!.compareStandby_hour(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareStandby_hour(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "gps_flag":
                     if (tabBarController_m.phone1!.compareGPS(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareGPS(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "bluetooth_flag":
                     if (tabBarController_m.phone1!.compareBluetooth(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareBluetooth(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "nfc_flag":
                     if (tabBarController_m.phone1!.compareNFC(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareNFC(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "memory_card_support_flag":
                     if (tabBarController_m.phone1!.compareMemoryCardSupport(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareMemoryCardSupport(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                 case "fingerprint_flag":
                     if (tabBarController_m.phone1!.compareFingerprint(c: tabBarController_m.phone2!)>0) {
-                        cell.lLabel.textColor = UIColor.red
+                        cell.lLabel.textColor = color
                     } else if (tabBarController_m.phone1!.compareFingerprint(c: tabBarController_m.phone2!)<0) {
-                        cell.rLabel.textColor = UIColor.red
+                        cell.rLabel.textColor = color
                     }
                     break;
                     

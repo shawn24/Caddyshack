@@ -311,6 +311,7 @@
 				TargetAttributes = {
 					29724C221D9EF765001140B6 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = F5P6PRMN7F;
 						ProvisioningStyle = Automatic;
 					};
 					29724C361D9EF765001140B6 = {
@@ -687,7 +688,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F5P6PRMN7F;
 				INFOPLIST_FILE = Seapare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Caddyshack.Seapare;
@@ -702,7 +703,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = F5P6PRMN7F;
 				INFOPLIST_FILE = Seapare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Caddyshack.Seapare;
