@@ -36,6 +36,9 @@ extension Reflectable
 }
 
 class CellPhone : Device, Reflectable {
+    //default exchange rates, will be override by the webservice call with latest exchange rate
+    //the default rates are here in case of failure to the webservice api call to exchange rate in searchViewController
+    static var exchange_rate : Dictionary<String, Float> = ["AUD": 1.0041, "CNY": 5.1433, "GBP": 0.59896, "JPY": 84.648, "RUB": 48.072, "USD": 0.74721, "EUR": 0.70259]
     var phone_id : Int!
     var cellphone_name : String!
     var colour : String!
@@ -148,6 +151,15 @@ class CellPhone : Device, Reflectable {
             return -1
         }
         return 0
+    }
+    
+    func getPriceByCurrency(code: String) -> Float{
+        if let rate = CellPhone.exchange_rate[code]{
+            return Float(rate*price)
+        }else{
+            print("No such currency code \(code), returning CAD price")
+            return price;
+        }
     }
     
 }

@@ -40,6 +40,8 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //get latest exchange rate from web
+        getLatestCurrencyRate()
         
         // Set background picture
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
@@ -365,6 +367,32 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         }
         
         return phoneList
+    }
+    
+    func getLatestCurrencyRate() {
+        var request = URLRequest(url: URL(string: "https://api.fixer.io/latest?base=CAD&symbols=USD,GBP,EUR,CNY,JPY,AUD,RUB")!)
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        session.dataTask(with: request) {data, response, err in
+            print("Entered the completionHandler")
+            do{
+                let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+                print(json)
+                if let rates = json["rates"] as? [String: AnyObject] {
+                    let codes = ["AUD","CNY","EUR","GBP","JPY","RUB","USD"]
+                    for item in codes {
+                        if let rate = rates[item] as? Float {
+                            print("\(item) is \(rate)")
+                            print("default \(item) is \(CellPhone.exchange_rate[item])")
+                            CellPhone.exchange_rate[item] = rate
+                            print("new \(item) is \(CellPhone.exchange_rate[item])")
+                        }
+                    }
+                }
+            }catch let error as NSError{
+                print(error)
+            }
+        }.resume()
     }
 }
 
