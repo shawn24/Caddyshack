@@ -59,7 +59,14 @@ class DetailPageViewController: UIViewController,UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detail page table view cell", for: indexPath as IndexPath) as! DetailPageTableViewCell
-        cell.lLabel.text = phoneHeaders![indexPath.row]
+        cell.lLabel.text = phoneHeaders![indexPath.row].replacingOccurrences(of: "_", with: " ").replacingOccurrences(of: " flag", with: "")
+        
+        if phoneHeaders![indexPath.row] == "price" {
+            if let text = navController.currency {
+                cell.lLabel.text = "price \(text)"
+            }
+        }
+            
         cell.rLabel.text = "\(phoneValues![indexPath.row])"
         
         

@@ -19,13 +19,21 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     @IBOutlet weak var cameraTextPicker: UITextField!
     @IBOutlet weak var ramTextPicker: UITextField!
     @IBOutlet weak var searchButton: UIButton!
-    
+    @IBOutlet weak var currencyTextPicker: UITextField!
     
     var brandOption = ["","Apple", "Samsung", "Microsoft", "onePlus"]
     var capacityOption = ["","8G","16G","32G","64G","128G","256G"]
     var priceOption = ["","0-200","200-500","500-700","700-1000","1000-"]
     var cameraOption = ["","3.15MP","5MP","8MP","12MP","13MP","16MP","20MP"]
     var ramOption = ["","256MB","512MB","1GB","1.5GB","2GB","3GB","4GB","6GB"]
+    var currencyOption = ["CAD","USD"]
+    
+    var brandOptionIndex = 0
+    var capacityOptionIndex = 0
+    var priceOptionIndex = 0
+    var cameraOptionIndex = 0
+    var ramOptionIndex = 0
+    var currencyOptionIndex = 0
     
     var selectedPickerOption:Array<String>?
     var selectedTextField:UITextField?
@@ -43,6 +51,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         priceTextPicker.delegate = self
         cameraTextPicker.delegate = self
         ramTextPicker.delegate = self
+        currencyTextPicker.delegate = self
         
         // Change the text fields' input view to picker view
         let pickerView = UIPickerView()
@@ -65,6 +74,8 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         cameraTextPicker.inputAccessoryView = toolBar
         ramTextPicker.inputView = pickerView
         ramTextPicker.inputAccessoryView = toolBar
+        currencyTextPicker.inputView = pickerView
+        currencyTextPicker.inputAccessoryView = toolBar
         
         searchButton.layer.cornerRadius = 5
         
@@ -104,24 +115,34 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
+        var index=0;
         selectedTextField = textField
         switch textField {
         case keywordTextField:
             break
         case brandTextPicker:
             selectedPickerOption = brandOption
+            index = brandOptionIndex
             break
         case capacityTextPicker:
             selectedPickerOption = capacityOption
+            index = capacityOptionIndex
             break
         case priceTextPicker:
             selectedPickerOption = priceOption
+            index = priceOptionIndex
             break
         case cameraTextPicker:
             selectedPickerOption = cameraOption
+            index = cameraOptionIndex
             break
         case ramTextPicker:
             selectedPickerOption = ramOption
+            index = ramOptionIndex
+            break
+        case currencyTextPicker:
+            selectedPickerOption = currencyOption
+            index = currencyOptionIndex
             break
         default:
             break
@@ -130,7 +151,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         let picker = textField.inputView
         if picker is UIPickerView {
             (picker as! UIPickerView).reloadAllComponents()
-            (picker as! UIPickerView).selectRow(0, inComponent: 0, animated: true)
+            (picker as! UIPickerView).selectRow(index, inComponent: 0, animated: true)
         }
     }
     
@@ -138,6 +159,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
+        
         textField.resignFirstResponder()
         return true
     }
@@ -172,6 +194,29 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
         // Update textfield text when row is selected
         
         if let s = selectedPickerOption , let t = selectedTextField {
+            
+            switch t {
+            case brandTextPicker:
+                brandOptionIndex = row
+                break
+            case capacityTextPicker:
+                capacityOptionIndex = row
+                break
+            case priceTextPicker:
+                priceOptionIndex = row
+                break
+            case cameraTextPicker:
+                cameraOptionIndex = row
+                break
+            case ramTextPicker:
+                ramOptionIndex = row
+                break
+            case currencyTextPicker:
+                currencyOptionIndex = row
+                break
+            default:
+                break
+            }
             t.text = s[row]
         }
     }
@@ -214,6 +259,7 @@ class SearchPageViewController: UIViewController, UITextFieldDelegate, UIPickerV
             t.cellPhoneSearchResultList = phones
             t.selectedIndex = 1
             t.search = true
+            t.currency = currencyTextPicker.text
             
         } else {
             print("tabBarController is nil")

@@ -66,7 +66,9 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         if indexPath.row == 0 {
             
             cell.nameCell.text = "Name"
-            cell.priceCell.text = "Price"
+            if let text = tabBar.currency {
+                cell.priceCell.text = "Price \(text)"
+            }
             cell.brandCell.text = "Brand"
             cell.cameraCell.text = "Camera (MP)"
             cell.capacityCell.text = "Capacity (GB)"
@@ -84,9 +86,13 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
                 }
                 
                 if priceTapCount == 0 {
-                    cell.priceCell.text = "Price ⬇️"
+                    if let text = tabBar.currency {
+                        cell.priceCell.text = "Price \(text) ⬇️"
+                    }
                 } else if priceTapCount == 1 {
-                    cell.priceCell.text = "Price ⬆️"
+                    if let text = tabBar.currency {
+                        cell.priceCell.text = "Price \(text) ⬆️"
+                    }
                 }
                 
                 if brandTapCount == 0 {
@@ -306,6 +312,7 @@ class ResultPageViewController: UIViewController, UITableViewDataSource, UITable
         if (segue.identifier == "detail page"){
             if let destination = segue.destination as? DetailPageNavController {
                 destination.phone = sendPhone
+                destination.currency = tabBar.currency
             }
             
         }

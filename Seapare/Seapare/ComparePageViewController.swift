@@ -112,6 +112,10 @@ class ComparePageViewController: UIViewController, UITableViewDataSource, UITabl
                 cell.hLabel.text = "camera"
             } else if cell.hLabel.text == "memory card support" {
                 cell.hLabel.text = "extra sd card"
+            } else if cell.hLabel.text == "price" {
+                if let text = tabBarController_m.currency {
+                    cell.hLabel.text = "price \(text)"
+                }
             }
             
             
