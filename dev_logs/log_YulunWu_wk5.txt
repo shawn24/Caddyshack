@@ -1,1 +1,1 @@
-This week, we 
+This week, we designed the mvc model and create the storyboard file and all controller files.
