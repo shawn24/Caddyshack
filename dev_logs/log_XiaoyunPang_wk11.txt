@@ -1,3 +1,4 @@
 Week 11: Nov. 28 - Dec. 4
 
 - Prepare for oral exams
+- Implemented currency change feature with teammates
