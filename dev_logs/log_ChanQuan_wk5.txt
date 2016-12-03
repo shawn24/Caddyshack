@@ -1,0 +1,1 @@
+this week i implement the database and display to the group to discuss which tables/parameters should be kept which are not.
