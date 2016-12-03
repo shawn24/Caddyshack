@@ -1,0 +1,1 @@
+Improving the UI by adding a nice background picture.
