@@ -10,5 +10,6 @@ import UIKit
 
 class DetailPageNavController: UINavigationController {
     var phone:CellPhone!
+    var currency:String?
 }
 

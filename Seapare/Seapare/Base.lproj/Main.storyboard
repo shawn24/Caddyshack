@@ -131,6 +131,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch" returnKeyType="search"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CAD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEX-WM-Kkr">
+                                <rect key="frame" x="16" y="28" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -139,6 +146,7 @@
                         <outlet property="brandTextPicker" destination="7J9-WY-EOp" id="h9I-8h-H07"/>
                         <outlet property="cameraTextPicker" destination="9uv-GF-Um9" id="XuK-nh-dfD"/>
                         <outlet property="capacityTextPicker" destination="hb0-s3-I9k" id="qBf-1j-njX"/>
+                        <outlet property="currencyTextPicker" destination="YEX-WM-Kkr" id="kpW-T1-51P"/>
                         <outlet property="keywordTextField" destination="TGo-jI-B7t" id="UKR-35-5J8"/>
                         <outlet property="priceTextPicker" destination="kSA-lo-l4X" id="GFB-0J-bu0"/>
                         <outlet property="ramTextPicker" destination="Feo-yO-0fK" id="IIe-mO-Tha"/>
@@ -147,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-274" y="-153"/>
+            <point key="canvasLocation" x="-274.39999999999998" y="-153.37331334332833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2a-sE-9av">
@@ -209,7 +217,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="327" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wzn-rd-yUc" id="WHt-kb-P9E">
-                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </tableViewCellContentView>
@@ -255,7 +263,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CU3-UG-OpR" id="zbj-py-nd0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -292,13 +300,13 @@
                                 <rect key="frame" x="16" y="72" width="343" height="575"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">1. On the Search Page, select options and tap "Search" button to search the phones.
+                                <string key="text">1. On the Search Page, select options and tap "Search" button to search the phones.
 
 2. On the Result Page, tap the title of each column to sort rows. Tap the name of a phone to open its detail page. 
 
 3. On the Result Page, tap the "+" of a phone to add this phone to the compare list. Tap the "Compare" icon on the tab bar to open the Compare List Page.  4. You can add at most two phones to the compare list. Tapping on one of the delete icons on the top of a column of Compare Page will delete this column. 
 
-5. Compare Page will compare the two phones in the compare list and will highlight the higher values.</mutableString>
+5. Compare Page will compare the two phones in the compare list and will highlight the higher values.</string>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -363,7 +371,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4C1-kB-NqO" id="OHh-Bz-mNJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
