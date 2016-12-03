@@ -1,0 +1,5 @@
+Nov 7 - Nov 13
+ - Bug fixes for data retrieve from database
+ - Stress test for the whole program
+ - Integrated control flow codes with UI
+

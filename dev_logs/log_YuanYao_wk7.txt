@@ -1,0 +1,4 @@
+Oct 31 - Nov 6
+ - Wrote SQL queries for cellphone data retrieve
+ - Connect UI to database
+

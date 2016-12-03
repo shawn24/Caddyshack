@@ -1,0 +1,4 @@
+Nov 21 - Nov 27
+ - Implemented detail page for cellphones
+ - Implemented comparison highlighting feature
+ - Group work for Deliverable 3

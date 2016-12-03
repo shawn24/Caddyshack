@@ -1,0 +1,4 @@
+Oct 17 - Oct 23
+ - Integrated and tested GRDB library to the app
+ - Group talk about database structure and decided final database schema
+
