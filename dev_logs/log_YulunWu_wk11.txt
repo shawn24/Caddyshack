@@ -1,0 +1,1 @@
+Adding the detail page feature and compare highlighting.
