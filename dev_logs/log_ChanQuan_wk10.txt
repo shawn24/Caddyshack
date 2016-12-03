@@ -1,0 +1,3 @@
+-write deliveriable 3 
+-draw the diagrams
+-test new features
